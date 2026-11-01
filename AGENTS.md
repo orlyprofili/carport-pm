@@ -131,7 +131,7 @@ After an authorized JSON rebuild:
 ```sh
 node scripts/generate.mjs --planner-source /tmp/carport-open-planner-studio \
   --preserve-baseline-from carport-hw.ifc
-/tmp/carport-ifc-venv/bin/python scripts/validate_ifc.py
+uv run --locked python scripts/validate_ifc.py
 ```
 
 After an app/MCP edit of the existing IFC, run the independent validator directly. For native checks, import a copy into the matching app/headless core and inspect its recalculation/round-trip; do not regenerate from stale JSON. Refresh or clearly identify any CSV/native report that still describes an older file. Never present old reports as verification of new IFC bytes.

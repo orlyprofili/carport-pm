@@ -1,0 +1,130 @@
+{
+  "schema": "IFC4X3_ADD2",
+  "taskCount": 86,
+  "sequenceCount": 141,
+  "removedRelationship": {
+    "predecessor": "LABPLAN",
+    "successor": "LOTPLAN",
+    "reason": "Rev1 sample allocation no longer waits for the complete qualification matrix"
+  },
+  "beforeDates": {
+    "START": "2026-11-02T09:00",
+    "G0": "2026-11-27T17:00",
+    "R1REL": "2026-12-01T17:00",
+    "R1EVT": "2027-01-19T17:00",
+    "CONNECTDEC": "2027-01-19T17:00",
+    "FREEZE": "2027-02-25T17:00",
+    "T1GATE": "2027-04-15T17:00",
+    "T2GATE": "2027-06-02T17:00",
+    "MARKET": "2027-06-21T17:00",
+    "PVTREADY": "2027-07-02T09:00",
+    "MPREL": "2027-08-18T17:00",
+    "MP": "2027-09-23T17:00"
+  },
+  "milestoneDates": {
+    "START": "2026-11-02T09:00",
+    "G0": "2026-11-20T17:00",
+    "R1REL": "2026-12-01T17:00",
+    "R1EVT": "2027-01-19T17:00",
+    "CONNECTDEC": "2027-01-19T17:00",
+    "FREEZE": "2027-02-25T17:00",
+    "T1GATE": "2027-04-15T17:00",
+    "T2GATE": "2027-06-02T17:00",
+    "MARKET": "2027-06-21T17:00",
+    "PVTREADY": "2027-07-02T09:00",
+    "MPREL": "2027-08-18T17:00",
+    "MP": "2027-09-23T17:00"
+  },
+  "updates": {
+    "SUPPLY": {
+      "name": "Coordinate Rev1 build with existing overseas manufacturer",
+      "duration": 3,
+      "start": "2026-11-09T09:00",
+      "finish": "2026-11-11T17:00"
+    },
+    "LOTPLAN": {
+      "name": "Agree Rev1 sample allocation and test budget",
+      "duration": 2,
+      "start": "2026-11-12T09:00",
+      "finish": "2026-11-13T17:00"
+    },
+    "G0": {
+      "name": "G0 - Early requirements and coordination aligned",
+      "duration": 0,
+      "start": "2026-11-20T17:00",
+      "finish": "2026-11-20T17:00"
+    },
+    "LABPLAN": {
+      "name": "Coordinate certification and qualification matrix with accredited lab",
+      "duration": 10,
+      "start": "2026-11-09T09:00",
+      "finish": "2026-11-20T17:00"
+    },
+    "LABBOOK": {
+      "name": "Confirm lab bookings, sample matrix and regulatory configuration",
+      "duration": 5,
+      "start": "2027-02-26T09:00",
+      "finish": "2027-03-04T17:00"
+    },
+    "SIMPILOT": {
+      "name": "Profili - Evaluate physical SIM / eUICC provider and roaming",
+      "duration": 15,
+      "start": "2026-11-20T09:00",
+      "finish": "2026-12-10T17:00"
+    }
+  },
+  "baselinePreserved": true,
+  "cpmError": null,
+  "remainingWork": [
+    {
+      "id": "asgn-mvxufrhbmkxu162",
+      "taskId": "task-mvx6hzf73fyk16",
+      "resourceId": "res-ifc-0CBS97eRwdEQiUT1eyvxRk",
+      "unitsPerDay": 1
+    }
+  ],
+  "cpmWarnings": {
+    "violatedConstraints": [],
+    "missedDeadlines": []
+  },
+  "inputSha256": "e87db69a9eb5f5a597c9c2a376a6ab528c32257833c3142d86dded6e96927bb8",
+  "outputSha256": "5b26fdce9b83734df6f0334cbf603363f022f8383910923a5a4ed4d0ac4bf56f",
+  "verification": {
+    "nativeReaderWriter": "passed; existing task identities, hierarchy, calendars, progress and baseline preserved",
+    "nativeReopenAndRecalculation": "passed; no schedule error",
+    "allLeavesHavePredecessorExceptStart": true,
+    "allLeavesReachFinalMilestone": true,
+    "independentIfcOpenShell": "IFC4X3_ADD2 schema and EXPRESS rules, zero findings",
+    "durationChangesOnly": [
+      "SUPPLY: 10 to 3 supplier working days",
+      "LOTPLAN: 5 to 2 joint working days"
+    ],
+    "assignmentValuesPreserved": true,
+    "resourceHistogram": [
+      {
+        "resourceId": "res-ifc-0_fGb$BxX3e8ONORtbcaj0",
+        "resourceName": "Profili",
+        "peakLoad": 2,
+        "peakDate": "2026-11-11",
+        "overallocatedDayCount": 0,
+        "loadSum": 187,
+        "capacitySum": 299,
+        "spanStart": "2026-11-02",
+        "spanEnd": "2027-08-18"
+      },
+      {
+        "resourceId": "res-ifc-0CBS97eRwdEQiUT1eyvxRk",
+        "resourceName": "Sofeast",
+        "peakLoad": 6,
+        "peakDate": "2027-03-29",
+        "overallocatedDayCount": 0,
+        "loadSum": 492,
+        "capacitySum": 11271,
+        "spanStart": "2026-11-02",
+        "spanEnd": "2027-09-23"
+      }
+    ],
+    "unresolvedDiagnostic": "Existing mixed-calendar backward calculation shows negative float of 1–3 days on parts of the network; no missed deadline was reported.",
+    "graphicalInspection": "not performed"
+  }
+}

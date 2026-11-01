@@ -1,9 +1,9 @@
 {
   "validator": "IfcOpenShell 0.8.3.post2",
   "schema": "IFC4X3_ADD2",
-  "entityCount": 2187,
+  "entityCount": 2186,
   "taskCount": 86,
-  "sequenceCount": 142,
+  "sequenceCount": 141,
   "calendarCount": 4,
   "expressRulesChecked": true,
   "findings": []

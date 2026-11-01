@@ -1,14 +1,16 @@
 # Carport hardware planning
 
-Open **[carport-hw.ifc](carport-hw.ifc)** in Open Planner Studio. The current IFC 4.3 ADD2 schedule has **86 entries, 142 dependencies, 12 milestones, four calendars, two resources and 89 assignments**.
+Open **[carport-hw.ifc](carport-hw.ifc)** in Open Planner Studio. The current IFC 4.3 ADD2 schedule has **86 entries, 141 dependencies, 12 milestones, four calendars, two resources and 89 assignments**.
 
-Profili has one-person base capacity and a second person during the peak windows in the [current effort/capacity report](reports/effort-capacity-validation.json). **Twelve hands-on electrical/design/software assignments remain full-time; 26 review, lab, certification, integration and pilot-support assignments use estimated 10–50% effort.** Profili effort totals 187 person-days, replacing the earlier blanket 394-person-day assumption. Task durations and acceptance criteria are unchanged. Sofeast retains 51 assignments as a parallel organization.
+The November 1 coordination update moved the planning-start milestone to the top and placed **Program decisions and coordination** between the Rev1 release and EVT sections. The operator reports that the overseas manufacturer built Rev0 and is already assisting with review. The plan now covers remaining Rev1 coordination with that manufacturer, early Rev1 sample allocation, manufacturer-supported lab coordination and Profili's SIM/provider evaluation. Later qualification samples are finalized with the lab. Task descriptions, exit evidence, notes and accountable roles were updated together. See the [planning basis](docs/carport-hw-planning-basis.md) for the assumptions and forecast impact.
 
-**Both resources now show zero overallocated days in the model. The pilot/production/ramp phase still starts July 2, 2027; shipment release is September 23, 2027.** Five tasks were sequenced within available float; all milestone dates and the original proposal baseline are preserved. Factory test-tool readiness takes priority over the product release candidate in the allocator. Profili’s peak load is two people. Effort and staffing remain planning assumptions, not confirmed commitments. The existing mixed-calendar negative-float diagnostic is disclosed in the current report.
+Profili has one-person base capacity and a second person during the peak windows described in the [earlier effort/capacity report](reports/effort-capacity-validation.json). **Twelve hands-on electrical/design/software assignments remain full-time; 26 review, lab, certification, integration and pilot-support assignments use estimated 10–50% effort.** Profili effort totals 187 person-days, replacing the earlier blanket 394-person-day assumption. The coordination update shortened the manufacturer and Rev1 sample-planning tasks; all other leaf durations remain unchanged. Sofeast retains 51 assignments as a parallel organization.
+
+**Both resources show zero overallocated days in the model. The pilot/production/ramp phase still starts July 2, 2027; shipment release is September 23, 2027.** Five tasks were previously sequenced within available float; the original proposal baseline is preserved. Factory test-tool readiness takes priority over the product release candidate in the allocator. Profili’s peak load is two people. Effort and staffing remain planning assumptions, not confirmed commitments. The existing mixed-calendar negative-float diagnostic is disclosed in the coordination report.
 
 Profili’s Ontario holidays and confirmed Christmas–New Year shutdown, Sofeast’s China planning calendar and joint task calendars are retained. China annual arrangements still require confirmation. Five freight waits keep coordination in their descriptions without continuous labor reservations; seven-day transport allowances are unchanged.
 
-The JSON, [generated CSV](reports/carport-hw.schedule.csv), [generation report](reports/validation.json), [first resource-assignment report](reports/resource-assignment-validation.json), [calendar report](reports/calendar-resource-validation.json) and [earlier two-person capacity report](reports/two-person-capacity-validation.json) describe historical snapshots. Regenerating from JSON would replace current live maintenance.
+The JSON, [generated CSV](reports/carport-hw.schedule.csv), [generation report](reports/validation.json), [effort/capacity report](reports/effort-capacity-validation.json), [first resource-assignment report](reports/resource-assignment-validation.json), [calendar report](reports/calendar-resource-validation.json) and [earlier two-person capacity report](reports/two-person-capacity-validation.json) describe earlier IFC snapshots. The new [coordination validation report](reports/coordination-validation.json) records the current checks; modeled Profili effort remains 187 person-days and Sofeast falls by seven task-days. Regenerating from JSON would replace current live maintenance.
 
 The plan covers Rev1 prototype PCBs and printed/handmade housings → Rev2 and T1 tooling → T2 preproduction candidate → pilot → first mass-production lot ready to ship. US/Canada qualification starts on Rev2/T1 **in parallel with T2**, followed by a T2 change-impact review and affected retests before market release. Satellite is an evaluation with an explicit decision gate before Rev2 freeze. Software work stays in its own backlogs and appears here as delivery gates.
 
@@ -47,12 +49,13 @@ node scripts/generate.mjs --planner-source /tmp/carport-open-planner-studio \
   --preserve-baseline-from carport-hw.ifc
 ```
 
-Independent schema verification uses Python 3.13, IfcOpenShell and its EXPRESS-rule dependency:
+Independent schema verification uses a project-local Python 3.13 environment managed by `uv`. The lockfile pins IfcOpenShell, pytest (needed for EXPRESS-rule checks), and their dependencies:
 
 ```sh
-uv venv --python 3.13 /tmp/carport-ifc-venv
-uv pip install --python /tmp/carport-ifc-venv/bin/python ifcopenshell==0.8.3.post2 pytest==9.2.0
-/tmp/carport-ifc-venv/bin/python scripts/validate_ifc.py
+uv sync --locked
+uv run --locked python scripts/validate_ifc.py
 ```
 
-Current effort/capacity validation results are in **[reports/effort-capacity-validation.json](reports/effort-capacity-validation.json)** and **[reports/ifc-schema-validation.json](reports/ifc-schema-validation.json)**. Native round-trip and document-open recalculation checks passed. Schema/EXPRESS validation found no issues. The final live histogram has zero resource conflicts; the existing mixed-calendar negative-float diagnostic remains disclosed in the current report. No graphical UI inspection was performed. Earlier reports remain historical snapshots.
+The validator reads the current IFC and replaces `reports/ifc-schema-validation.json`; it does not regenerate the schedule. The `.venv` directory is local and ignored by Git.
+
+Current checks are in **[reports/coordination-validation.json](reports/coordination-validation.json)** and **[reports/ifc-schema-validation.json](reports/ifc-schema-validation.json)**. Native reader/writer and document-open recalculation checks passed. Schema/EXPRESS validation found no issues. The headless histogram has zero resource conflicts; the existing mixed-calendar negative-float diagnostic remains disclosed in the coordination report. No graphical UI inspection was performed. Earlier reports remain historical snapshots.
