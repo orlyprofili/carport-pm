@@ -29,7 +29,7 @@ Read the README and planning basis before substantive schedule changes. Read cur
 ## Choose an editing route before writing
 
 - **Maintaining the current schedule:** use Open Planner Studio or its connected `planner_*` MCP tools, preserve progress/baselines/notes, and save/export the edited IFC. This is the normal route after people have started maintaining the plan.
-- **Rebuilding from declarative input:** edit `carport-hw.plan.json`, then use the generator. This replaces the IFC, CSV, native report and proposal baseline. It does not merge application/MCP edits, progress or baselines into the JSON.
+- **Rebuilding from declarative input:** edit `carport-hw.plan.json`, then use the generator. This replaces the IFC, CSV and native report. Pass `--preserve-baseline-from` to carry existing baselines forward by stable `Plan ID`; otherwise the generator creates a new proposal baseline. Neither route merges application/MCP edits or progress into the JSON.
 - **Inspecting or validating an existing IFC:** read/validate that file directly. Do not run the generator as a validation shortcut: it would replace the file being inspected.
 
 Before regeneration, account for any newer app/MCP changes and preserve the current IFC. Reconcile intended changes rather than silently overwriting them. A saved/exported IFC does not automatically update the JSON source. If synchronization is outside the request, state which representation was updated and that regeneration would replace those changes.
@@ -53,7 +53,7 @@ Do not make routine schedule edits with regex replacements of STEP entities or b
 
 The hardware source is `~/work/carport/hw`. The initial status was Rev0 complete, Rev1 schematic in review and layout underway. Read current evidence before updating that status. Treat saved review findings as items to reconcile, not automatically open defects or proof of closure.
 
-The plan distinguishes Rev1 EVT, Rev2 design changes, T1/T2 mold trials with integrated evaluations, formal qualification/market access, PVT, and mass-production release. Mold acceptance alone does not demonstrate electrical qualification, certification or manufacturing readiness. Track ePTFE humidity/acoustic performance, final membrane bonding/grill process, USB/seam sealing and pigtail strain relief on representative assemblies.
+The plan distinguishes Rev1 EVT, Rev2 design changes, T1/T2 mold trials with integrated evaluations, formal qualification/market access, PVT, and mass-production release. Qualification starts on Rev2 for suitable electrical/conducted work and on representative T1 for enclosure-sensitive work, in parallel with T2. Require lab acceptance of sample representativeness and an explicit T2 impact/retest gate; do not restore a blanket T2-before-all-testing dependency. Mold acceptance alone does not demonstrate electrical qualification, certification or manufacturing readiness. Track ePTFE humidity/acoustic performance, final membrane bonding/grill process, USB/seam sealing and pigtail strain relief on representative assemblies.
 
 US and Canada are the initial launch markets; expansion is later scope. Satellite remains an evaluation with an explicit inclusion/deferment decision before Rev2 freeze. Do not assume service availability or final-product approval from nRF module capability. Confirm installation location and the 12 V versus 24 V input requirement before choosing automotive test envelopes. Use qualified lab/vendor evidence for certification and lead-time claims, and cite sources in the planning basis.
 
@@ -129,7 +129,8 @@ Use the full setup commands in `README.md` when dependencies are missing. `/tmp`
 After an authorized JSON rebuild:
 
 ```sh
-node scripts/generate.mjs --planner-source /tmp/carport-open-planner-studio
+node scripts/generate.mjs --planner-source /tmp/carport-open-planner-studio \
+  --preserve-baseline-from carport-hw.ifc
 /tmp/carport-ifc-venv/bin/python scripts/validate_ifc.py
 ```
 

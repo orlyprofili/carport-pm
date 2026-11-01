@@ -11,6 +11,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = process.argv.indexOf('--planner-source');
 if (arg < 0 || !process.argv[arg + 1]) throw new Error('Usage: node scripts/generate.mjs --planner-source /path/to/open-planner-studio');
 const upstream = resolve(process.argv[arg + 1]);
+const baselineArg = process.argv.indexOf('--preserve-baseline-from');
+if (baselineArg >= 0 && !process.argv[baselineArg + 1]) throw new Error('--preserve-baseline-from requires an IFC path');
+const baselineSource = baselineArg >= 0 ? resolve(process.argv[baselineArg + 1]) : null;
 const plan = JSON.parse(readFileSync(join(root, 'carport-hw.plan.json'), 'utf8'));
 const sha = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: upstream, encoding: 'utf8' }).trim();
 if (sha !== plan.plannerCommit) throw new Error(`Planner source must be pinned to ${plan.plannerCommit}; got ${sha}`);
@@ -26,7 +29,7 @@ import { writeIFC } from '@/services/ifc/ifcWriter';
 import { readIFC, assertIfcIntegrity } from '@/services/ifc/ifcReader';
 import { buildWriteIFCInput } from '@/state/ifcSaveInput';
 export { readIFC, writeIFC, assertIfcIntegrity };
-export function build(plan) {
+export function build(plan, previous) {
   const ctx = createAppStoreContext({ emitHostEvents: false });
   const S = () => ctx.store.getState();
   S().newProject();
@@ -65,8 +68,21 @@ export function build(plan) {
   }
   S().runCPM();
   if (!S().cpmResult || S().cpmResult.error) throw new Error(JSON.stringify(S().cpmResult));
-  // A proposal baseline captures estimates; no progress or historical actual dates are invented.
-  S().saveBaseline('Initial proposal - 2026-10-31 - unapproved estimates');
+  if (previous) {
+    const field = previous.customFieldDefs?.find(f => f.name === 'Plan ID');
+    if (!field) throw new Error('Baseline source has no Plan ID field');
+    const oldKeys = new Map(previous.tasks.map(t => [t.id, t.customFields?.[field.id]]));
+    const baselines = (previous.baselines || []).map(b => ({ ...b, tasks: b.tasks.map(t => {
+      const key = oldKeys.get(t.taskId);
+      if (!key || !ids[key]) throw new Error('Cannot map baseline task ' + t.taskId + ' to a retained Plan ID');
+      return { ...t, taskId: ids[key] };
+    }) }));
+    ctx.store.setState({ baselines, activeBaselineId: previous.activeBaselineId || null,
+      comparedBaselineIds: previous.comparedBaselineIds || [null, null] });
+  } else {
+    // A proposal baseline captures estimates; no progress or actual dates are invented.
+    S().saveBaseline('Initial proposal - 2026-10-31 - unapproved estimates');
+  }
   const input = buildWriteIFCInput(S());
   return { input, ifc: writeIFC(input), result: S().cpmResult, taskIds: ids };
 }
@@ -78,9 +94,20 @@ export function build(plan) {
     logLevel: 'warning' });
   const api = await import(pathToFileURL(bundle));
   validatePlan(plan);
-  const built = api.build(plan);
+  const previous = baselineSource ? api.readIFC(readFileSync(baselineSource, 'utf8')) : null;
+  const built = api.build(plan, previous);
   api.assertIfcIntegrity(built.ifc);
   const parsed = api.readIFC(built.ifc);
+  if (previous) {
+    const baselineDigest = p => {
+      const field = p.customFieldDefs?.find(f => f.name === 'Plan ID');
+      const keys = new Map(p.tasks.map(t => [t.id, t.customFields?.[field?.id]]));
+      return JSON.stringify((p.baselines || []).map(b => ({ name: b.name, createdAt: b.createdAt,
+        projectEnd: b.projectEnd, projectDuration: b.projectDuration,
+        tasks: b.tasks.map(t => ({ ...t, taskId: keys.get(t.taskId) })).sort((a,b) => a.taskId.localeCompare(b.taskId)) })));
+    };
+    if (baselineDigest(previous) !== baselineDigest(parsed)) throw new Error('Existing baseline dates or metadata changed');
+  }
   const second = api.readIFC(api.writeIFC(parsed));
   const digest = p => JSON.stringify({
     project: { name: p.project.name, startDate: p.project.startDate, schema: p.project.ifcSchema },
@@ -130,9 +157,10 @@ export function build(plan) {
     sourceAsOf: plan.asOf, schema: 'IFC4X3_ADD2', tasks: parsed.tasks.length,
     milestones: parsed.tasks.filter(t => t.isMilestone).length, dependencies: parsed.sequences.length,
     calendars: 1 + (parsed.resourceCalendars || []).filter(c => c.id !== parsed.calendar.id).length,
-    baselines: parsed.baselines.length, checks: ['acyclic dependency network', 'all leaves reach final milestone',
+    baselines: parsed.baselines.length, baselinesPreserved: !!previous, checks: ['acyclic dependency network', 'all leaves reach final milestone',
       'native IFC integrity check', 'native reader/writer round-trip preserves planning data',
-      'native document-open and F5 recalculation preserves all day-measure dates', 'zero native scheduler warnings'],
+      'native document-open and F5 recalculation preserves all day-measure dates', 'zero native scheduler warnings',
+      ...(previous ? ['existing baseline dates and metadata preserved by stable Plan ID'] : [])],
     milestonesForecast: rows.filter(r => plan.tasks.find(t => t.id === r.id)?.milestone),
     criticalPath: rows.filter(r => r.critical && !plan.tasks.some(t => t.parent === r.id)).map(r => ({id:r.id,name:r.name,start:r.start,finish:r.finish})),
     schedule: summary };
