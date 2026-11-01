@@ -1,0 +1,717 @@
+{
+  "updatedAt": "2026-11-01T04:57:28.624Z",
+  "file": "carport-hw.ifc",
+  "sha256": "100b49d0c68b6c48d175609253200207ae05b4abcdeaf5561ebe16f43de4e036",
+  "schema": "IFC4X3_ADD2",
+  "route": "Live desktop MCP planner_manage_resources; planner_export_ifc saved existing document",
+  "requestedChange": "Profili capacity two people during overloaded periods, one otherwise; retain full-time task assignments and July 2027 pilot phase",
+  "capacity": {
+    "base": 1,
+    "peak": 2,
+    "windows": [
+      {
+        "from": "2026-11-02",
+        "to": "2026-12-01"
+      },
+      {
+        "from": "2027-01-06",
+        "to": "2027-01-19"
+      },
+      {
+        "from": "2027-02-03",
+        "to": "2027-02-04"
+      },
+      {
+        "from": "2027-02-16",
+        "to": "2027-02-18"
+      },
+      {
+        "from": "2027-02-26",
+        "to": "2027-03-11"
+      },
+      {
+        "from": "2027-03-19",
+        "to": "2027-05-02"
+      },
+      {
+        "from": "2027-05-06",
+        "to": "2027-05-13"
+      },
+      {
+        "from": "2027-05-19",
+        "to": "2027-06-02"
+      },
+      {
+        "from": "2027-06-07",
+        "to": "2027-06-08"
+      },
+      {
+        "from": "2027-06-10",
+        "to": "2027-06-21"
+      }
+    ],
+    "availabilitySteps": [
+      {
+        "from": "2026-11-02",
+        "maxUnits": 2
+      },
+      {
+        "from": "2026-12-02",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-01-06",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-01-20",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-03",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-02-05",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-16",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-02-19",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-26",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-03-12",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-03-19",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-05-03",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-05-06",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-05-14",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-05-19",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-06-03",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-06-07",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-06-09",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-06-10",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-06-22",
+        "maxUnits": 1
+      }
+    ],
+    "calendar": "Profili / Ontario engineering and lab - Mon-Fri",
+    "staffingStatus": "Operator-authorized planning assumption; no actual staffing commitment recorded"
+  },
+  "resourceLoadBefore": {
+    "ProfiliOverallocatedDays": 103
+  },
+  "resourceLoadAfter": [
+    {
+      "resourceId": "res-mvxcevh9wb1d6",
+      "resourceName": "Profili",
+      "peakLoad": 8,
+      "peakDate": "2027-04-09",
+      "overallocatedDayCount": 59,
+      "loadSum": 394,
+      "capacitySum": 324,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-08-18"
+    },
+    {
+      "resourceId": "res-mvxcevha78nl7",
+      "resourceName": "Sofeast",
+      "peakLoad": 6,
+      "peakDate": "2027-03-29",
+      "overallocatedDayCount": 0,
+      "loadSum": 499,
+      "capacitySum": 11271,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-09-23"
+    }
+  ],
+  "pilotPhase": {
+    "id": "task-mvx6hzu5p9fn90",
+    "wbs": "9",
+    "name": "09 - Pilot, production release and ramp",
+    "dur": 58,
+    "durUnit": "days",
+    "start": "2027-07-02T09:00",
+    "end": "2027-09-23T17:00",
+    "crit": true
+  },
+  "projectFinish": "2027-09-23T17:00",
+  "feasibility": {
+    "resolved": false,
+    "prePilotEffortPersonDays": 374,
+    "availableProfiliWorkingDaysBeforePilot": 163,
+    "maximumTwoPersonDaysBeforePilot": 326,
+    "minimumPersonDayShortfall": 48,
+    "note": "Upper bound assumes two people available every working day before July 2; actual peak-window capacity is no greater. Calendars/dependencies can further constrain feasibility."
+  },
+  "levelingApplied": false,
+  "previews": {
+    "withinFloat": {
+      "dryRun": true,
+      "recomputed": false,
+      "constrainToFloat": true,
+      "delays": {
+        "task-mvx6hzfn5qps19": 9,
+        "task-mvx6hzpykml771": 30
+      },
+      "unresolved": {
+        "task-mvx6hzqdsqou73": [
+          "2027-05-19",
+          "2027-05-20",
+          "2027-05-21"
+        ],
+        "task-mvx6hzje9odx38": [
+          "2027-01-06",
+          "2027-01-07",
+          "2027-01-08",
+          "2027-01-11",
+          "2027-01-12",
+          "2027-01-13",
+          "2027-01-14",
+          "2027-01-15",
+          "2027-01-18",
+          "2027-01-19"
+        ],
+        "task-mvx6hzqmpxyu74": [
+          "2027-03-29",
+          "2027-03-30",
+          "2027-03-31",
+          "2027-04-01",
+          "2027-04-02",
+          "2027-04-06",
+          "2027-04-07",
+          "2027-04-08",
+          "2027-04-09",
+          "2027-04-12",
+          "2027-04-16",
+          "2027-04-19",
+          "2027-04-20",
+          "2027-04-21",
+          "2027-04-22"
+        ],
+        "task-mvx6hzfi88jg18": [
+          "2026-11-11",
+          "2026-11-12",
+          "2026-11-13",
+          "2026-11-16",
+          "2026-11-17",
+          "2026-11-18",
+          "2026-11-19",
+          "2026-11-20",
+          "2026-11-23",
+          "2026-11-24",
+          "2026-11-25",
+          "2026-11-26",
+          "2026-11-27"
+        ],
+        "task-mvx6hzpqtqpx70": [
+          "2027-03-29",
+          "2027-03-30",
+          "2027-03-31",
+          "2027-04-01",
+          "2027-04-02",
+          "2027-04-06",
+          "2027-04-07",
+          "2027-04-08",
+          "2027-04-09",
+          "2027-04-12"
+        ],
+        "task-mvx6hztaclam86": [
+          "2027-03-29",
+          "2027-03-30",
+          "2027-03-31",
+          "2027-04-01",
+          "2027-04-02",
+          "2027-04-06",
+          "2027-04-07",
+          "2027-04-08",
+          "2027-04-09",
+          "2027-04-12",
+          "2027-04-13",
+          "2027-04-14",
+          "2027-04-15",
+          "2027-04-16",
+          "2027-04-19",
+          "2027-04-20",
+          "2027-04-21",
+          "2027-04-22",
+          "2027-04-23",
+          "2027-04-26",
+          "2027-04-27",
+          "2027-04-28",
+          "2027-04-29",
+          "2027-04-30"
+        ],
+        "task-mvx6hzr4oc1z76": [
+          "2027-03-29",
+          "2027-03-30",
+          "2027-03-31",
+          "2027-04-01",
+          "2027-04-02",
+          "2027-04-06",
+          "2027-04-07",
+          "2027-04-08",
+          "2027-04-09",
+          "2027-04-12"
+        ],
+        "task-mvx6hzsn8ztu83": [
+          "2027-02-26",
+          "2027-03-01",
+          "2027-03-02",
+          "2027-03-03",
+          "2027-03-04"
+        ],
+        "task-mvx6hzsvyjkl84": [
+          "2027-04-09",
+          "2027-04-12",
+          "2027-04-13",
+          "2027-04-14",
+          "2027-04-15",
+          "2027-04-16",
+          "2027-04-19",
+          "2027-04-20",
+          "2027-04-21",
+          "2027-04-22",
+          "2027-04-23",
+          "2027-04-26",
+          "2027-04-27",
+          "2027-04-28",
+          "2027-04-29"
+        ],
+        "task-mvx6hzt2kde885": [
+          "2027-03-24",
+          "2027-03-25",
+          "2027-03-29",
+          "2027-03-30",
+          "2027-03-31",
+          "2027-04-01",
+          "2027-04-02",
+          "2027-04-06",
+          "2027-04-07",
+          "2027-04-08",
+          "2027-04-09",
+          "2027-04-12",
+          "2027-04-13",
+          "2027-04-14",
+          "2027-04-15",
+          "2027-04-16"
+        ]
+      },
+      "unresolvedReasons": {
+        "task-mvx6hzqdsqou73": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzje9odx38": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzqmpxyu74": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzfi88jg18": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzpqtqpx70": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hztaclam86": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzr4oc1z76": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzsn8ztu83": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzsvyjkl84": "INSUFFICIENT_CAPACITY",
+        "task-mvx6hzt2kde885": "INSUFFICIENT_CAPACITY"
+      },
+      "shifts": {
+        "task-mvx6hzfn5qps19": {
+          "oldStart": "2026-11-09T09:00",
+          "newStart": "2026-11-20T09:00",
+          "delta": 9
+        },
+        "task-mvx6hzpykml771": {
+          "oldStart": "2027-04-20T09:00",
+          "newStart": "2027-06-07T09:00",
+          "delta": 30
+        },
+        "task-mvx6hzs2m9bu80": {
+          "oldStart": "2027-06-07T09:00",
+          "newStart": "2027-06-15T09:00",
+          "delta": 5
+        },
+        "task-mvx6hzsb53rt81": {
+          "oldStart": "2027-06-21T17:00",
+          "newStart": "2027-06-28T17:00",
+          "delta": 5
+        }
+      },
+      "projectEndBefore": "2027-09-23T17:00",
+      "projectEndAfter": "2027-09-23T17:00",
+      "projectEndDelta": {
+        "before": "2027-09-23T17:00",
+        "after": "2027-09-23T17:00",
+        "calendarDays": 0
+      },
+      "projectEnd": "2027-09-23T17:00",
+      "warnings": [
+        "10 task(s) keep an unresolved peak; see `unresolved` for conflict dates and, when available, `unresolvedReasons` (INTRINSIC_OVERRUN = the task on its own already asks for more than the capacity, CALENDAR_MISMATCH = resource and task calendar do not line up, INSUFFICIENT_CAPACITY = there is simply too little capacity, CEILING_TOO_TIGHT = the extension ceiling leaves too little room, CEILING_UNREACHABLE = a deadline/backward constraint makes every ceiling unreachable, RESIDUAL_FULL = the project's own allocation had room but the residual capacity of the library pool item is used up — other documents occupy the pool, NO_WINDOW_IN_HORIZON = the search horizon ran out without finding a fitting window). Pinned tasks are not moved or searched for a new window, so their conflict dates may have no search reason."
+      ]
+    },
+    "unrestricted": {
+      "dryRun": true,
+      "recomputed": false,
+      "constrainToFloat": false,
+      "delays": {
+        "task-mvx6hzqdsqou73": 21,
+        "task-mvx6hzje9odx38": 65,
+        "task-mvx6hzqmpxyu74": 30,
+        "task-mvx6hzfn5qps19": 9,
+        "task-mvx6hzfi88jg18": 110,
+        "task-mvx6hzpqtqpx70": 55,
+        "task-mvx6hztaclam86": 81,
+        "task-mvx6hzr4oc1z76": 100,
+        "task-mvx6hzs2m9bu80": 10,
+        "task-mvx6hzsn8ztu83": 150,
+        "task-mvx6hzt2kde885": 15
+      },
+      "unresolved": {},
+      "unresolvedReasons": {},
+      "shifts": {
+        "task-mvx6hzfi88jg18": {
+          "oldStart": "2026-11-09T09:00",
+          "newStart": "2027-04-23T09:00",
+          "delta": 110
+        },
+        "task-mvx6hzfn5qps19": {
+          "oldStart": "2026-11-09T09:00",
+          "newStart": "2026-11-20T09:00",
+          "delta": 9
+        },
+        "task-mvx6hzje9odx38": {
+          "oldStart": "2027-01-06T09:00",
+          "newStart": "2027-04-20T09:00",
+          "delta": 65
+        },
+        "task-mvx6hzjlvyso39": {
+          "oldStart": "2027-01-19T17:00",
+          "newStart": "2027-05-06T17:00",
+          "delta": 75
+        },
+        "task-mvx6hzjypanz41": {
+          "oldStart": "2027-01-19T17:00",
+          "newStart": "2027-05-13T17:00",
+          "delta": 80
+        },
+        "task-mvx6hzk4zt5q42": {
+          "oldStart": "2027-01-20T09:00",
+          "newStart": "2027-05-14T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzkcirrv43": {
+          "oldStart": "2027-02-03T09:00",
+          "newStart": "2027-05-31T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzkizxtl44": {
+          "oldStart": "2027-01-20T09:00",
+          "newStart": "2027-05-14T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzkqqsh245": {
+          "oldStart": "2027-02-03T09:00",
+          "newStart": "2027-05-31T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzkwjtld46": {
+          "oldStart": "2027-02-03T09:00",
+          "newStart": "2027-05-28T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzl44qjk47": {
+          "oldStart": "2027-02-25T17:00",
+          "newStart": "2027-06-14T17:00",
+          "delta": 75
+        },
+        "task-mvx6hzlhyppa49": {
+          "oldStart": "2027-02-26T09:00",
+          "newStart": "2027-06-15T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzlqc70u50": {
+          "oldStart": "2027-03-19T09:00",
+          "newStart": "2027-07-06T09:00",
+          "delta": 109
+        },
+        "task-mvx6hzlyd3b451": {
+          "oldStart": "2027-02-26T09:00",
+          "newStart": "2027-06-15T09:00",
+          "delta": 75
+        },
+        "task-mvx6hzm6cftc52": {
+          "oldStart": "2027-03-24T09:00",
+          "newStart": "2027-07-12T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzmd27vf53": {
+          "oldStart": "2027-03-29T09:00",
+          "newStart": "2027-07-14T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzmjlnvx54": {
+          "oldStart": "2027-02-26T09:00",
+          "newStart": "2027-06-15T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzmsyhd055": {
+          "oldStart": "2027-03-26T09:00",
+          "newStart": "2027-07-13T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzmy3h5z56": {
+          "oldStart": "2027-04-02T09:00",
+          "newStart": "2027-07-20T09:00",
+          "delta": 109
+        },
+        "task-mvx6hzn6mzpx57": {
+          "oldStart": "2027-04-09T09:00",
+          "newStart": "2027-07-26T09:00",
+          "delta": 70
+        },
+        "task-mvx6hznek8mf58": {
+          "oldStart": "2027-04-15T17:00",
+          "newStart": "2027-07-30T17:00",
+          "delta": 74
+        },
+        "task-mvx6hznlkmob59": {
+          "oldStart": "2027-03-29T09:00",
+          "newStart": "2027-07-14T09:00",
+          "delta": 70
+        },
+        "task-mvx6hznz3ixk61": {
+          "oldStart": "2027-04-16T09:00",
+          "newStart": "2027-08-03T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzo61a5s62": {
+          "oldStart": "2027-04-23T09:00",
+          "newStart": "2027-08-10T09:00",
+          "delta": 73
+        },
+        "task-mvx6hzoezr2k63": {
+          "oldStart": "2027-05-12T09:00",
+          "newStart": "2027-08-24T09:00",
+          "delta": 73
+        },
+        "task-mvx6hzomt7s564": {
+          "oldStart": "2027-05-14T09:00",
+          "newStart": "2027-08-26T09:00",
+          "delta": 104
+        },
+        "task-mvx6hzouwytm65": {
+          "oldStart": "2027-05-19T09:00",
+          "newStart": "2027-08-31T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzp0hwuf66": {
+          "oldStart": "2027-06-02T17:00",
+          "newStart": "2027-09-14T17:00",
+          "delta": 71
+        },
+        "task-mvx6hzpc406l68": {
+          "oldStart": "2027-02-26T09:00",
+          "newStart": "2027-06-15T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzpi414u69": {
+          "oldStart": "2027-04-16T09:00",
+          "newStart": "2027-08-03T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzpqtqpx70": {
+          "oldStart": "2027-03-29T09:00",
+          "newStart": "2027-10-12T09:00",
+          "delta": 125
+        },
+        "task-mvx6hzpykml771": {
+          "oldStart": "2027-04-20T09:00",
+          "newStart": "2027-10-26T09:00",
+          "delta": 120
+        },
+        "task-mvx6hzq5920n72": {
+          "oldStart": "2027-04-20T09:00",
+          "newStart": "2027-08-05T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzqdsqou73": {
+          "oldStart": "2027-04-20T09:00",
+          "newStart": "2027-09-03T09:00",
+          "delta": 91
+        },
+        "task-mvx6hzqmpxyu74": {
+          "oldStart": "2027-03-29T09:00",
+          "newStart": "2027-08-26T09:00",
+          "delta": 100
+        },
+        "task-mvx6hzqvuq4g75": {
+          "oldStart": "2027-04-27T09:00",
+          "newStart": "2027-09-27T09:00",
+          "delta": 100
+        },
+        "task-mvx6hzr4oc1z76": {
+          "oldStart": "2027-03-29T09:00",
+          "newStart": "2027-12-14T09:00",
+          "delta": 170
+        },
+        "task-mvx6hzrck0rw77": {
+          "oldStart": "2027-03-05T09:00",
+          "newStart": "2027-06-22T09:00",
+          "delta": 72
+        },
+        "task-mvx6hzrmflyr78": {
+          "oldStart": "2027-05-19T09:00",
+          "newStart": "2027-08-31T09:00",
+          "delta": 70
+        },
+        "task-mvx6hzruhtj679": {
+          "oldStart": "2027-06-07T09:00",
+          "newStart": "2028-01-06T09:00",
+          "delta": 135
+        },
+        "task-mvx6hzs2m9bu80": {
+          "oldStart": "2027-06-07T09:00",
+          "newStart": "2028-01-20T09:00",
+          "delta": 145
+        },
+        "task-mvx6hzsb53rt81": {
+          "oldStart": "2027-06-21T17:00",
+          "newStart": "2028-02-10T17:00",
+          "delta": 157
+        },
+        "task-mvx6hzsn8ztu83": {
+          "oldStart": "2027-02-26T09:00",
+          "newStart": "2028-02-11T09:00",
+          "delta": 220
+        },
+        "task-mvx6hzsvyjkl84": {
+          "oldStart": "2027-04-09T09:00",
+          "newStart": "2028-02-28T09:00",
+          "delta": 202
+        },
+        "task-mvx6hzt2kde885": {
+          "oldStart": "2027-03-19T09:00",
+          "newStart": "2028-03-20T09:00",
+          "delta": 247
+        },
+        "task-mvx6hztaclam86": {
+          "oldStart": "2027-03-19T09:00",
+          "newStart": "2027-11-02T09:00",
+          "delta": 156
+        },
+        "task-mvx6hztj77tz87": {
+          "oldStart": "2027-06-03T09:00",
+          "newStart": "2028-04-18T09:00",
+          "delta": 213
+        },
+        "task-mvx6hztqw0c788": {
+          "oldStart": "2027-06-03T09:00",
+          "newStart": "2027-09-16T09:00",
+          "delta": 73
+        },
+        "task-mvx6hztyf9jy89": {
+          "oldStart": "2027-07-02T09:00",
+          "newStart": "2028-05-08T17:00",
+          "delta": 209
+        },
+        "task-mvx6hzuaqmok91": {
+          "oldStart": "2027-07-02T09:00",
+          "newStart": "2028-05-09T09:00",
+          "delta": 203
+        },
+        "task-mvx6hzujuv9292": {
+          "oldStart": "2027-07-16T09:00",
+          "newStart": "2028-05-23T09:00",
+          "delta": 312
+        },
+        "task-mvx6hzur2vdc93": {
+          "oldStart": "2027-07-21T09:00",
+          "newStart": "2028-05-29T09:00",
+          "delta": 210
+        },
+        "task-mvx6hzv0wy5594": {
+          "oldStart": "2027-08-12T09:00",
+          "newStart": "2028-06-19T09:00",
+          "delta": 191
+        },
+        "task-mvx6hzv7rnim95": {
+          "oldStart": "2027-08-18T17:00",
+          "newStart": "2028-06-23T17:00",
+          "delta": 210
+        },
+        "task-mvx6hzvenas396": {
+          "oldStart": "2027-08-19T09:00",
+          "newStart": "2028-06-26T09:00",
+          "delta": 202
+        },
+        "task-mvx6hzvm97es97": {
+          "oldStart": "2027-09-17T09:00",
+          "newStart": "2028-07-24T09:00",
+          "delta": 202
+        },
+        "task-mvx6hzvtve8998": {
+          "oldStart": "2027-09-23T17:00",
+          "newStart": "2028-07-28T17:00",
+          "delta": 209
+        }
+      },
+      "projectEndBefore": "2027-09-23T17:00",
+      "projectEndAfter": "2028-07-28T17:00",
+      "projectEndDelta": {
+        "before": "2027-09-23T17:00",
+        "after": "2028-07-28T17:00",
+        "calendarDays": 309
+      },
+      "projectEnd": "2027-09-23T17:00",
+      "warnings": [
+        "The project end date SHIFTS: 2027-09-23T17:00 → 2028-07-28T17:00 (+309 calendar days). This is the consequence of `constrainToFloat: false`; with `true` the end date is sacred."
+      ]
+    }
+  },
+  "checks": [
+    "Two-person time-phased availability persisted and survives native IFC round-trip",
+    "All schedule data outside Profili resource capacity/description unchanged, including dates, hierarchy, dependencies, calendar definitions, assignments, leaf durations, progress, notes, custom fields and baselines",
+    "Native IFC integrity passed",
+    "Native reader/writer round-trip passed ignoring generated assignment IDs",
+    "Native document-open recalculation reproduces day-task civil dates; zero native warnings"
+  ],
+  "independentSchemaReport": "reports/ifc-schema-validation.json",
+  "remainingDiagnostics": [
+    "Profili remains overallocated on 59 days, peak load eight; two-person capacity alone cannot resolve all full-time overlaps while retaining July",
+    "Mixed-calendar negative float remains as previously documented in reports/calendar-resource-validation.json",
+    "No leveling that would move the July pilot was applied; previews are not the saved schedule"
+  ],
+  "representation": "IFC updated; JSON and earlier CSV/reports remain historical; regeneration would replace the maintenance",
+  "backup": ".cache/two-person-capacity-2026-11-01/live-before.ifc"
+}

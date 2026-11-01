@@ -1,0 +1,849 @@
+{
+  "updatedAt": "2026-11-01T04:42:55.941Z",
+  "file": "carport-hw.ifc",
+  "sha256": "6409bf8d47a8e9e57883bb37f05fd4c6c30de86f51d083204cba4f721ef2b455",
+  "editingRoute": "Live desktop MCP bridge, existing open document; one planner_batch, followed by planner_export_ifc overwrite",
+  "plannerVersion": "2026.44.0",
+  "plannerCommit": "2f6bc4d8220a255d1f7a493b9e39141ac2caa821",
+  "schema": "IFC4X3_ADD2",
+  "counts": {
+    "tasks": 86,
+    "dependencies": 142,
+    "milestones": 12,
+    "calendars": 3,
+    "resources": 2,
+    "assignments": 94,
+    "baselines": 1
+  },
+  "projectEndBefore": "2027-09-21T17:00",
+  "projectEndAfter": "2027-09-21T17:00",
+  "checks": [
+    "live before/after overview identical",
+    "all task data except resourceIds preserved, including hierarchy, duration, dates, float, progress, notes and custom fields",
+    "project metadata, dependencies, task calendars, calendar definitions, baseline data and active/comparison selection preserved",
+    "94 intended resource/task pairs present with no mutation rejections",
+    "native IFC integrity",
+    "native reader/writer round-trip preserves data (assignment IDs are generated on read)",
+    "native document-open recalculation preserves civil dates for day tasks and exact times for hour tasks",
+    "zero native scheduler warnings; no negative total float",
+    "acyclic network; every non-start leaf has predecessor and every non-final leaf has path to completion",
+    "independent IfcOpenShell schema and EXPRESS validation: zero findings"
+  ],
+  "schemaValidationReport": "reports/ifc-schema-validation.json",
+  "backupDirectory": ".cache/resource-assignment-2026-11-01",
+  "assumptions": [
+    "Organization-level responsibility assignments. maxUnits=1 and unitsPerDay=1 are planner placeholders; no confirmed staffing, availability, effort or cost.",
+    "Both resources currently inherit the engineering resource calendar; task-specific supplier and transit calendars remain unchanged. Confirm each organization calendar before capacity planning.",
+    "Sofeast assists testing/certification and peer EE reviews; existing lab/certifier and operator approval roles remain in task custom fields.",
+    "No leveling, status-date change, progress update, baseline capture or calendar change. Year-end exceptions retained.",
+    "Existing live changes were preserved: the open plan already contained 86 tasks, 142 links and a September 21, 2027 finish; the earlier JSON/reports contain 87 tasks, 144 links and a September 22 finish.",
+    "JSON and old generated CSV/native validation report are not synchronized; regeneration would replace live changes and resource assignments.",
+    "No graphical Gantt/print validation performed. Export persists IFC but does not mark the app document saved."
+  ],
+  "resourceLoad": [
+    {
+      "resourceId": "res-mvxcevh9wb1d6",
+      "resourceName": "Profili",
+      "peakLoad": 8,
+      "peakDate": "2027-04-09",
+      "overallocatedDayCount": 101,
+      "loadSum": 394,
+      "capacitySum": 219,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-08-17"
+    },
+    {
+      "resourceId": "res-mvxcevha78nl7",
+      "resourceName": "Sofeast",
+      "peakLoad": 6,
+      "peakDate": "2027-03-30",
+      "overallocatedDayCount": 139,
+      "loadSum": 524,
+      "capacitySum": 219,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-09-21"
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-ifc-0_fGb$BxX3e8ONORtbcaj0",
+      "name": "Profili",
+      "type": "SUBCONTRACTOR",
+      "description": "Schematic, PCB, firmware and software delivery; electrical integration and technical support. Organization-level responsibility assignments only. maxUnits=1 and assignment unitsPerDay=1 are required planner placeholders, not confirmed FTE staffing, effort, availability or a capacity commitment. No resource leveling.",
+      "maxUnits": 1,
+      "color": "#1E293B",
+      "assignmentCount": 38
+    },
+    {
+      "id": "res-ifc-0CBS97eRwdEQiUT1eyvxRk",
+      "name": "Sofeast",
+      "type": "SUBCONTRACTOR",
+      "description": "Manufacturing partner: mechanical engineering, manufacturing, tooling, supply chain, assisting with certification and testing, and peer EE schematic/PCB review. Formal lab/certifier and operator approvals retain their existing roles. Organization-level responsibility assignments only. maxUnits=1 and assignment unitsPerDay=1 are required planner placeholders, not confirmed FTE staffing, effort, availability or a capacity commitment. No resource leveling.",
+      "maxUnits": 1,
+      "color": "#B91C1C",
+      "assignmentCount": 56
+    }
+  ],
+  "milestonesForecast": [
+    {
+      "planId": "START",
+      "name": "Planning start - Rev0 complete; Rev1 schematic in review and layout underway",
+      "start": "2026-11-02T09:00",
+      "finish": "2026-11-02T09:00"
+    },
+    {
+      "planId": "G0",
+      "name": "G0 - Requirements, test strategy and supplier assumptions accepted",
+      "start": "2026-11-27T17:00",
+      "finish": "2026-11-27T17:00"
+    },
+    {
+      "planId": "R1REL",
+      "name": "G1 - Release Rev1 PCBA prototype run",
+      "start": "2026-12-01T17:00",
+      "finish": "2026-12-01T17:00"
+    },
+    {
+      "planId": "R1EVT",
+      "name": "G2 - Rev1 EVT findings and Rev2 change list approved",
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00"
+    },
+    {
+      "planId": "CONNECTDEC",
+      "name": "G3a - Cellular SIM and satellite launch decision",
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00"
+    },
+    {
+      "planId": "FREEZE",
+      "name": "G3 - Release Rev2 PCBA and housing tooling",
+      "start": "2027-02-26T17:00",
+      "finish": "2027-02-26T17:00"
+    },
+    {
+      "planId": "T1GATE",
+      "name": "G4 - T1 integrated evaluation and correction list accepted",
+      "start": "2027-04-15T17:00",
+      "finish": "2027-04-15T17:00"
+    },
+    {
+      "planId": "T2GATE",
+      "name": "G5 - T2 preproduction candidate accepted",
+      "start": "2027-06-02T17:00",
+      "finish": "2027-06-02T17:00"
+    },
+    {
+      "planId": "MARKET",
+      "name": "G6 - Qualification and US/Canada release evidence accepted",
+      "start": "2027-06-16T17:00",
+      "finish": "2027-06-16T17:00"
+    },
+    {
+      "planId": "PVTREADY",
+      "name": "G7 - Controlled pilot build readiness",
+      "start": "2027-06-30T17:00",
+      "finish": "2027-06-30T17:00"
+    },
+    {
+      "planId": "MPREL",
+      "name": "G8 - Authorize mass production release",
+      "start": "2027-08-17T17:00",
+      "finish": "2027-08-17T17:00"
+    },
+    {
+      "planId": "MP",
+      "name": "G9 - First mass-production lot ready to ship",
+      "start": "2027-09-21T17:00",
+      "finish": "2027-09-21T17:00"
+    }
+  ],
+  "criticalPath": [
+    "task-mvx6hzkwjtld46",
+    "task-mvx6hzl44qjk47",
+    "task-mvx6hzlhyppa49",
+    "task-mvx6hzmjlnvx54",
+    "task-mvx6hzlqc70u50",
+    "task-mvx6hzmsyhd055",
+    "task-mvx6hzm6cftc52",
+    "task-mvx6hzmd27vf53",
+    "task-mvx6hzn6mzpx57",
+    "task-mvx6hznek8mf58",
+    "task-mvx6hznz3ixk61",
+    "task-mvx6hzo61a5s62",
+    "task-mvx6hzoezr2k63",
+    "task-mvx6hzomt7s564",
+    "task-mvx6hzouwytm65",
+    "task-mvx6hzp0hwuf66",
+    "task-mvx6hztqw0c788",
+    "task-mvx6hztyf9jy89",
+    "task-mvx6hzuaqmok91",
+    "task-mvx6hzujuv9292",
+    "task-mvx6hzur2vdc93",
+    "task-mvx6hzv0wy5594",
+    "task-mvx6hzv7rnim95",
+    "task-mvx6hzvenas396",
+    "task-mvx6hzvm97es97",
+    "task-mvx6hzvtve8998"
+  ],
+  "assignments": [
+    {
+      "planId": "SCOPE",
+      "wbs": "1.2",
+      "task": "Confirm US/Canada launch requirements and installation envelope",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SIMPILOT",
+      "wbs": "1.6",
+      "task": "Evaluate physical SIM / eUICC provider and roaming",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "NTNEVAL",
+      "wbs": "1.7",
+      "task": "Evaluate nRF9151 satellite service and supported hardware/firmware",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SCHCLOSE",
+      "wbs": "2.1",
+      "task": "Close Rev1 schematic review and BOM metadata",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LAYOUT",
+      "wbs": "2.2",
+      "task": "Complete Rev1 routing and RF / power / mechanical review",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1DFM",
+      "wbs": "2.3",
+      "task": "Rev1 PCBA DFM, AVL availability and release package",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWREV1",
+      "wbs": "3.3",
+      "task": "External gate - Rev1 bring-up firmware and diagnostic tools",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BRING",
+      "wbs": "3.4",
+      "task": "Bring up Rev1 PCBA with current-limited staged power",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1POWER",
+      "wbs": "3.5",
+      "task": "Rev1 power, input fault screening and radio transient tests",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1RF",
+      "wbs": "3.6",
+      "task": "Rev1 antenna, coexistence and EMC pre-scan",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1SENSE",
+      "wbs": "3.7",
+      "task": "Rev1 integrated membrane, housing and sensor experiments",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2SCHEM",
+      "wbs": "4.2",
+      "task": "Rev2 electrical changes, worst-case closure and schematic review",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2LAYOUT",
+      "wbs": "4.3",
+      "task": "Rev2 layout, RF and DFM review",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FMEA",
+      "wbs": "4.5",
+      "task": "Cross-discipline design risk and verification review",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWDVT",
+      "wbs": "5.3",
+      "task": "External gate - Rev2 DVT and RF test firmware",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BRING",
+      "wbs": "5.4",
+      "task": "Rev2 incoming bring-up and early lab sample release",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2VERIFY",
+      "wbs": "5.5",
+      "task": "Complete Rev2 electrical fix verification alongside lab testing",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1EVAL",
+      "wbs": "5.9",
+      "task": "T1 - Mechanical and electrical assembly evaluation",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRECOMP",
+      "wbs": "5.11",
+      "task": "Rev2 EMC / RF readiness pre-scan using prototype housing",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2ECO",
+      "wbs": "6.1",
+      "task": "Freeze T2 correction package and final test limits",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2EVAL",
+      "wbs": "6.5",
+      "task": "T2 - Integrated mechanical and electrical evaluation",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABBOOK",
+      "wbs": "7.1",
+      "task": "Confirm lab bookings, sample matrix and regulatory configuration",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABSAMPLE",
+      "wbs": "7.2",
+      "task": "Accept representative T1 assemblies for formal lab work",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALPOWER",
+      "wbs": "7.3",
+      "task": "Rev2 vehicle power qualification - prototype housing allowed",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALASSEMBLY",
+      "wbs": "7.4",
+      "task": "T1 accessible-assembly ESD and enclosed thermal confirmation",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FCCIC",
+      "wbs": "7.6",
+      "task": "T1 US FCC / Canada ISED host RF, emissions and exposure assessment",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLAPPROVE",
+      "wbs": "7.7",
+      "task": "Rev2 cellular/operator and conditional NTN conducted / protocol campaign",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLFINAL",
+      "wbs": "7.8",
+      "task": "T1 cellular OTA / antenna and provider acceptance completion",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BTSIG",
+      "wbs": "7.9",
+      "task": "Complete Bluetooth product qualification",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALDELTA",
+      "wbs": "7.11",
+      "task": "Preliminary T2 qualification change-impact review",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "REGDOC",
+      "wbs": "7.12",
+      "task": "Prepare labels, installation instructions and compliance file",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "RETESTBUF",
+      "wbs": "7.13",
+      "task": "Final T2 qualification disposition and affected retest reserve",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXDES",
+      "wbs": "8.1",
+      "task": "Design production programming and end-of-line fixtures",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXBUILD",
+      "wbs": "8.2",
+      "task": "Build and correlate fixtures with golden/reference units",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWFACT",
+      "wbs": "8.3",
+      "task": "External gate - Factory firmware, provisioning and test tools",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWPRODUCT",
+      "wbs": "8.4",
+      "task": "External gate - Integrated product release candidate",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PILOTFIELD",
+      "wbs": "9.3",
+      "task": "Supervised US/Canada vehicle pilot and soak",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTCLOSE",
+      "wbs": "9.4",
+      "task": "Close pilot defects and approve yield / quality evidence",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABPLAN",
+      "wbs": "1.3",
+      "task": "Agree certification and qualification matrix with accredited lab",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SUPPLY",
+      "wbs": "1.4",
+      "task": "Select overseas build partners and reserve indicative capacity",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SCHCLOSE",
+      "wbs": "2.1",
+      "task": "Close Rev1 schematic review and BOM metadata",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LAYOUT",
+      "wbs": "2.2",
+      "task": "Complete Rev1 routing and RF / power / mechanical review",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1DFM",
+      "wbs": "2.3",
+      "task": "Rev1 PCBA DFM, AVL availability and release package",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MEARCH",
+      "wbs": "2.5",
+      "task": "Design clamshell and interfaces for prototype manufacture",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "VENTSELECT",
+      "wbs": "2.6",
+      "task": "Select humidity vent and MEMS acoustic membrane stacks",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRINTS",
+      "wbs": "2.7",
+      "task": "Print housing variants and hand-build membrane/grill/pigtail prototypes",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PROTOME",
+      "wbs": "2.8",
+      "task": "Evaluate printed enclosure fit, acoustic/RH and cable interfaces",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BUILD",
+      "wbs": "3.1",
+      "task": "Fabricate and assemble Rev1 engineering boards",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1SHIP",
+      "wbs": "3.2",
+      "task": "Rev1 board shipment, import and incoming inspection",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BRING",
+      "wbs": "3.4",
+      "task": "Bring up Rev1 PCBA with current-limited staged power",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1POWER",
+      "wbs": "3.5",
+      "task": "Rev1 power, input fault screening and radio transient tests",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1RF",
+      "wbs": "3.6",
+      "task": "Rev1 antenna, coexistence and EMC pre-scan",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1SENSE",
+      "wbs": "3.7",
+      "task": "Rev1 integrated membrane, housing and sensor experiments",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2SCHEM",
+      "wbs": "4.2",
+      "task": "Rev2 electrical changes, worst-case closure and schematic review",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2LAYOUT",
+      "wbs": "4.3",
+      "task": "Rev2 layout, RF and DFM review",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MEDFM",
+      "wbs": "4.4",
+      "task": "Tool-ready enclosure, vent process and cable assembly DFM",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FMEA",
+      "wbs": "4.5",
+      "task": "Cross-discipline design risk and verification review",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "TOOLQUOTE",
+      "wbs": "4.6",
+      "task": "Approve mold design, tooling contract and trial plan",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BUILD",
+      "wbs": "5.1",
+      "task": "Build Rev2 production-intent boards",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2SHIP",
+      "wbs": "5.2",
+      "task": "Ship and inspect Rev2 boards",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BRING",
+      "wbs": "5.4",
+      "task": "Rev2 incoming bring-up and early lab sample release",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2VERIFY",
+      "wbs": "5.5",
+      "task": "Complete Rev2 electrical fix verification alongside lab testing",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1CUT",
+      "wbs": "5.6",
+      "task": "T1 - Cut clamshell and included strain-relief tooling",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1TRIAL",
+      "wbs": "5.7",
+      "task": "T1 - First shots, supplier metrology and assembly samples",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1SHIP",
+      "wbs": "5.8",
+      "task": "T1 - Air shipment and incoming sample inspection",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1EVAL",
+      "wbs": "5.9",
+      "task": "T1 - Mechanical and electrical assembly evaluation",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRECOMP",
+      "wbs": "5.11",
+      "task": "Rev2 EMC / RF readiness pre-scan using prototype housing",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2ECO",
+      "wbs": "6.1",
+      "task": "Freeze T2 correction package and final test limits",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2FIX",
+      "wbs": "6.2",
+      "task": "T2 - Tool corrections and process adjustments",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2TRIAL",
+      "wbs": "6.3",
+      "task": "T2 - Repeat trial and supplier first-article inspection",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2SHIP",
+      "wbs": "6.4",
+      "task": "T2 - Air shipment and incoming inspection",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2EVAL",
+      "wbs": "6.5",
+      "task": "T2 - Integrated mechanical and electrical evaluation",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABBOOK",
+      "wbs": "7.1",
+      "task": "Confirm lab bookings, sample matrix and regulatory configuration",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABSAMPLE",
+      "wbs": "7.2",
+      "task": "Accept representative T1 assemblies for formal lab work",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALPOWER",
+      "wbs": "7.3",
+      "task": "Rev2 vehicle power qualification - prototype housing allowed",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALASSEMBLY",
+      "wbs": "7.4",
+      "task": "T1 accessible-assembly ESD and enclosed thermal confirmation",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALENV",
+      "wbs": "7.5",
+      "task": "T1 enclosure, environmental and cable qualification",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FCCIC",
+      "wbs": "7.6",
+      "task": "T1 US FCC / Canada ISED host RF, emissions and exposure assessment",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLAPPROVE",
+      "wbs": "7.7",
+      "task": "Rev2 cellular/operator and conditional NTN conducted / protocol campaign",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLFINAL",
+      "wbs": "7.8",
+      "task": "T1 cellular OTA / antenna and provider acceptance completion",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BTSIG",
+      "wbs": "7.9",
+      "task": "Complete Bluetooth product qualification",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BATT",
+      "wbs": "7.10",
+      "task": "Battery, transport, material and product safety documentation",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALDELTA",
+      "wbs": "7.11",
+      "task": "Preliminary T2 qualification change-impact review",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "REGDOC",
+      "wbs": "7.12",
+      "task": "Prepare labels, installation instructions and compliance file",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "RETESTBUF",
+      "wbs": "7.13",
+      "task": "Final T2 qualification disposition and affected retest reserve",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXDES",
+      "wbs": "8.1",
+      "task": "Design production programming and end-of-line fixtures",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXBUILD",
+      "wbs": "8.2",
+      "task": "Build and correlate fixtures with golden/reference units",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SOP",
+      "wbs": "8.5",
+      "task": "Create assembly SOPs, quality control and training package",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MATERIAL",
+      "wbs": "8.6",
+      "task": "Approve production material availability and logistics plan",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTBUILD",
+      "wbs": "9.1",
+      "task": "Run PVT pilot on intended overseas production line",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTSHIP",
+      "wbs": "9.2",
+      "task": "Ship pilot units and verify receiving / fulfillment process",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTCLOSE",
+      "wbs": "9.4",
+      "task": "Close pilot defects and approve yield / quality evidence",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MPBUILD",
+      "wbs": "9.6",
+      "task": "Build first mass-production lot and controlled ramp",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MPAUDIT",
+      "wbs": "9.7",
+      "task": "First MP lot outgoing audit and shipment release",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    }
+  ]
+}

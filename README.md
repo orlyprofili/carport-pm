@@ -1,27 +1,35 @@
 # Carport hardware planning
 
-Open **[carport-hw.ifc](carport-hw.ifc)** in Open Planner Studio using File → Open. It is an IFC 4.3 ADD2 **schedule**, with 87 entries, 144 dependencies, 12 milestones, three calendars, task notes, accountable roles, exit evidence and the preserved initial proposal baseline.
+Open **[carport-hw.ifc](carport-hw.ifc)** in Open Planner Studio. The current IFC 4.3 ADD2 schedule has **86 entries, 142 dependencies, 12 milestones, four calendars, two resources and 89 assignments**.
+
+Profili has one-person base capacity and a second person during the peak windows in the [current effort/capacity report](reports/effort-capacity-validation.json). **Twelve hands-on electrical/design/software assignments remain full-time; 26 review, lab, certification, integration and pilot-support assignments use estimated 10–50% effort.** Profili effort totals 187 person-days, replacing the earlier blanket 394-person-day assumption. Task durations and acceptance criteria are unchanged. Sofeast retains 51 assignments as a parallel organization.
+
+**Both resources now show zero overallocated days in the model. The pilot/production/ramp phase still starts July 2, 2027; shipment release is September 23, 2027.** Five tasks were sequenced within available float; all milestone dates and the original proposal baseline are preserved. Factory test-tool readiness takes priority over the product release candidate in the allocator. Profili’s peak load is two people. Effort and staffing remain planning assumptions, not confirmed commitments. The existing mixed-calendar negative-float diagnostic is disclosed in the current report.
+
+Profili’s Ontario holidays and confirmed Christmas–New Year shutdown, Sofeast’s China planning calendar and joint task calendars are retained. China annual arrangements still require confirmation. Five freight waits keep coordination in their descriptions without continuous labor reservations; seven-day transport allowances are unchanged.
+
+The JSON, [generated CSV](reports/carport-hw.schedule.csv), [generation report](reports/validation.json), [first resource-assignment report](reports/resource-assignment-validation.json), [calendar report](reports/calendar-resource-validation.json) and [earlier two-person capacity report](reports/two-person-capacity-validation.json) describe historical snapshots. Regenerating from JSON would replace current live maintenance.
 
 The plan covers Rev1 prototype PCBs and printed/handmade housings → Rev2 and T1 tooling → T2 preproduction candidate → pilot → first mass-production lot ready to ship. US/Canada qualification starts on Rev2/T1 **in parallel with T2**, followed by a T2 change-impact review and affected retests before market release. Satellite is an evaluation with an explicit decision gate before Rev2 freeze. Software work stays in its own backlogs and appears here as delivery gates.
 
 Planning status is **October 31, 2026**, with remaining work scheduled from **November 2, 2026**. Rev0 is recorded as complete in the status narrative; historical dates and progress percentages are not invented. These dates are an unapproved estimate, with no staffing, supplier, lab or purchase commitments implied.
 
-| Milestone | Revised calculated forecast |
+| Milestone | Current IFC calculated forecast |
 |---|---|
-| Rev1 prototype build release | December 11, 2026 |
-| Rev1 EVT findings accepted | January 29, 2027 |
-| Rev2 / housing tool release | March 1, 2027 |
-| T1 integrated evaluation accepted | April 16, 2027 |
-| T2 preproduction candidate accepted | June 3, 2027 |
-| Qualification / US-Canada release evidence accepted | June 22, 2027 |
+| Rev1 prototype build release | December 1, 2026 |
+| Rev1 EVT findings accepted | January 19, 2027 |
+| Rev2 / housing tool release | February 25, 2027 |
+| T1 integrated evaluation accepted | April 15, 2027 |
+| T2 preproduction candidate accepted | June 2, 2027 |
+| Qualification / US-Canada release evidence accepted | June 21, 2027 |
 | Mass-production authorization | August 18, 2027 |
-| First mass-production lot ready to ship | September 22, 2027 |
+| First mass-production lot ready to ship | September 23, 2027 |
 
-T1 retains the proposed **6–8 week** window and T2 **4–6 weeks**, measured from their respective releases. Electrical and conducted/network work can start after the two-day Rev2 incoming bring-up (forecast March 31, 2027), using printed housings/handmade parts where the lab agrees they do not invalidate the result. Formal enclosure-sensitive campaigns use accepted representative T1 assemblies (forecast April 21). T2 changes undergo a three-day impact review and a ten-day affected-retest reserve. This moves qualification release seven weeks earlier and the first production lot **47 calendar days earlier** than the original November 8 forecast. The original unapproved proposal baseline remains in the IFC; it has not been reset to the accelerated dates.
+Qualification continues on suitable Rev2 work and representative T1 assemblies in parallel with T2; the final T2 impact/retest gate remains. Resource/calendar maintenance preserved leaf-task durations and the original unapproved baseline. Current dates are calculated forecasts, not supplier, lab or capacity commitments.
 
 Customer distribution still follows final-configuration compliance acceptance. Printed resin, substitute adhesives or an unrepresentative handmade seal do not establish production-enclosure qualification; the lab must accept representative T1 parts and determine which T2 changes require repeats.
 
-Read **[the planning basis](docs/carport-hw-planning-basis.md)** for scope, research, lead-time definitions, qualification strategy, assumptions, decisions and software repository map. **[The CSV schedule](reports/carport-hw.schedule.csv)** is an inspection/export view of the same plan, not the file to open in the planner.
+Read **[the planning basis](docs/carport-hw-planning-basis.md)** for scope, research, lead-time definitions, qualification strategy, assumptions, decisions and software repository map. The older CSV is a historical inspection view, not the file to open in the planner.
 
 ## Updating the plan
 
@@ -47,4 +55,4 @@ uv pip install --python /tmp/carport-ifc-venv/bin/python ifcopenshell==0.8.3.pos
 /tmp/carport-ifc-venv/bin/python scripts/validate_ifc.py
 ```
 
-Validation results are in **[reports/validation.json](reports/validation.json)** and **[reports/ifc-schema-validation.json](reports/ifc-schema-validation.json)**. Checks cover network connectivity/cycles, native IFC round-trip preservation, opening and recalculating through the app's headless core, and independent IFC schema/EXPRESS rules. Day-measure tasks retain their civil dates; the app may make shift boundary times explicit when reopening. No graphical UI inspection was performed.
+Current effort/capacity validation results are in **[reports/effort-capacity-validation.json](reports/effort-capacity-validation.json)** and **[reports/ifc-schema-validation.json](reports/ifc-schema-validation.json)**. Native round-trip and document-open recalculation checks passed. Schema/EXPRESS validation found no issues. The final live histogram has zero resource conflicts; the existing mixed-calendar negative-float diagnostic remains disclosed in the current report. No graphical UI inspection was performed. Earlier reports remain historical snapshots.

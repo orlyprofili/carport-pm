@@ -1,0 +1,2152 @@
+{
+  "updatedAt": "2026-11-01T04:54:14.880Z",
+  "file": "carport-hw.ifc",
+  "sha256": "773f0983edd0ce15629ff6f75dc79714d0fab186eae49589cbb01cd5ea1ed309",
+  "schema": "IFC4X3_ADD2",
+  "route": "Live desktop MCP; calendar/resource/task edits followed by clear_leveling and native IFC export",
+  "counts": {
+    "tasks": 86,
+    "dependencies": 142,
+    "resources": 2,
+    "assignments": 89,
+    "calendars": 4
+  },
+  "pilotPhase": {
+    "id": "task-mvx6hzu5p9fn90",
+    "wbs": "9",
+    "name": "09 - Pilot, production release and ramp",
+    "dur": 58,
+    "durUnit": "days",
+    "start": "2027-07-02T09:00",
+    "end": "2027-09-23T17:00",
+    "crit": true
+  },
+  "finish": "2027-09-23T17:00",
+  "leveling": {
+    "applied": false,
+    "clearedDelays": 20,
+    "reason": "Operator rejected the 2029 leveled result; restore July 2027 pilot phase. Full-time assignments retained and conflicts disclosed."
+  },
+  "checks": [
+    "Native IFC integrity check passed",
+    "Native reader/writer round-trip preserves data except generated assignment IDs",
+    "Native document-open recalculation preserves day-task civil dates and exact hour-task times",
+    "Project metadata, hierarchy, dependencies, leaf durations, notes, custom fields and progress preserved",
+    "Baseline metadata and civil dates preserved; active/comparison selection retained",
+    "Seven-day transit calendar and five-day allowances preserved; five continuous shipping staff reservations removed",
+    "No leveling delays remain"
+  ],
+  "schemaValidationReport": "reports/ifc-schema-validation.json",
+  "nativeWarnings": [],
+  "resourceLoad": [
+    {
+      "resourceId": "res-mvxcevh9wb1d6",
+      "resourceName": "Profili",
+      "peakLoad": 8,
+      "peakDate": "2027-04-09",
+      "overallocatedDayCount": 103,
+      "loadSum": 394,
+      "capacitySum": 221,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-08-18"
+    },
+    {
+      "resourceId": "res-mvxcevha78nl7",
+      "resourceName": "Sofeast",
+      "peakLoad": 6,
+      "peakDate": "2027-03-29",
+      "overallocatedDayCount": 0,
+      "loadSum": 499,
+      "capacitySum": 11271,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-09-23"
+    }
+  ],
+  "negativeFloat": [
+    {
+      "id": "task-mvx6hzemxupj12",
+      "name": "01 - Current position and program decisions",
+      "wbs": "1",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-12-04T17:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "P0"
+    },
+    {
+      "id": "task-mvx6hzerk0of13",
+      "name": "Planning start - Rev0 complete; Rev1 schematic in review and layout underway",
+      "wbs": "1.1",
+      "parentId": "task-mvx6hzemxupj12",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-11-02T09:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2026-10-29T09:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "START"
+    },
+    {
+      "id": "task-mvx6hzg0cbna21",
+      "name": "02 - Rev1 PCB and prototype housing release",
+      "wbs": "2",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-12-11T17:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2027-01-04T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "P1"
+    },
+    {
+      "id": "task-mvx6hzg5ze3122",
+      "name": "Close Rev1 schematic review and BOM metadata",
+      "wbs": "2.1",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-11-10T17:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2026-11-06T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "SCHCLOSE"
+    },
+    {
+      "id": "task-mvx6hzgklu3u24",
+      "name": "Complete Rev1 routing and RF / power / mechanical review",
+      "wbs": "2.2",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-11-11T09:00",
+      "finish": "2026-11-24T17:00",
+      "lateStart": "2026-11-09T09:00",
+      "lateFinish": "2026-11-20T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "LAYOUT"
+    },
+    {
+      "id": "task-mvx6hzgsad5c25",
+      "name": "Rev1 PCBA DFM, AVL availability and release package",
+      "wbs": "2.3",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-11-25T09:00",
+      "finish": "2026-12-01T17:00",
+      "lateStart": "2026-11-23T09:00",
+      "lateFinish": "2026-11-27T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "R1DFM"
+    },
+    {
+      "id": "task-mvx6hzgyh4zj26",
+      "name": "G1 - Release Rev1 PCBA prototype run",
+      "wbs": "2.4",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-12-01T17:00",
+      "finish": "2026-12-01T17:00",
+      "lateStart": "2026-11-27T17:00",
+      "lateFinish": "2026-11-27T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "R1REL"
+    },
+    {
+      "id": "task-mvx6hzhz4fet31",
+      "name": "03 - Rev1 EVT build and integrated learning",
+      "wbs": "3",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2026-11-11T09:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2026-11-30T09:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -3,
+      "critical": true,
+      "planId": "P2"
+    },
+    {
+      "id": "task-mvx6hzi47aen32",
+      "name": "Fabricate and assemble Rev1 engineering boards",
+      "wbs": "3.1",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-12-02T09:00",
+      "finish": "2026-12-15T17:00",
+      "lateStart": "2026-11-30T09:00",
+      "lateFinish": "2026-12-11T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "R1BUILD"
+    },
+    {
+      "id": "task-mvx6hzib1vym33",
+      "name": "Rev1 board shipment, import and incoming inspection",
+      "wbs": "3.2",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-12-16T09:00",
+      "finish": "2026-12-20T17:00",
+      "lateStart": "2026-12-13T09:00",
+      "lateFinish": "2026-12-17T17:00",
+      "totalFloat": -3,
+      "critical": true,
+      "planId": "R1SHIP"
+    },
+    {
+      "id": "task-mvx6hzirsbgv35",
+      "name": "Bring up Rev1 PCBA with current-limited staged power",
+      "wbs": "3.4",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2026-12-21T09:00",
+      "finish": "2027-01-05T17:00",
+      "lateStart": "2026-12-18T09:00",
+      "lateFinish": "2027-01-04T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1BRING"
+    },
+    {
+      "id": "task-mvx6hziyj7br36",
+      "name": "Rev1 power, input fault screening and radio transient tests",
+      "wbs": "3.5",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-01-06T09:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-05T09:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1POWER"
+    },
+    {
+      "id": "task-mvx6hzj7pfp337",
+      "name": "Rev1 antenna, coexistence and EMC pre-scan",
+      "wbs": "3.6",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-01-06T09:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-05T09:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1RF"
+    },
+    {
+      "id": "task-mvx6hzje9odx38",
+      "name": "Rev1 integrated membrane, housing and sensor experiments",
+      "wbs": "3.7",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-01-06T09:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-05T09:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1SENSE"
+    },
+    {
+      "id": "task-mvx6hzjlvyso39",
+      "name": "G2 - Rev1 EVT findings and Rev2 change list approved",
+      "wbs": "3.8",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1EVT"
+    },
+    {
+      "id": "task-mvx6hzjth7dp40",
+      "name": "04 - Rev2 and tool-ready design freeze",
+      "wbs": "4",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-02-25T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-02-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "P3"
+    },
+    {
+      "id": "task-mvx6hzjypanz41",
+      "name": "G3a - Cellular SIM and satellite launch decision",
+      "wbs": "4.1",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "CONNECTDEC"
+    },
+    {
+      "id": "task-mvx6hzk4zt5q42",
+      "name": "Rev2 electrical changes, worst-case closure and schematic review",
+      "wbs": "4.2",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-01-20T09:00",
+      "finish": "2027-02-02T17:00",
+      "lateStart": "2027-01-19T09:00",
+      "lateFinish": "2027-02-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2SCHEM"
+    },
+    {
+      "id": "task-mvx6hzkcirrv43",
+      "name": "Rev2 layout, RF and DFM review",
+      "wbs": "4.3",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-02-03T09:00",
+      "finish": "2027-02-25T17:00",
+      "lateStart": "2027-02-02T09:00",
+      "lateFinish": "2027-02-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2LAYOUT"
+    },
+    {
+      "id": "task-mvx6hzl44qjk47",
+      "name": "G3 - Release Rev2 PCBA and housing tooling",
+      "wbs": "4.7",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-02-25T17:00",
+      "finish": "2027-02-25T17:00",
+      "lateStart": "2027-02-24T17:00",
+      "lateFinish": "2027-02-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "FREEZE"
+    },
+    {
+      "id": "task-mvx6hzlbe19e48",
+      "name": "05 - Rev2 / T1 first molded integration",
+      "wbs": "5",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2027-02-26T09:00",
+      "finish": "2027-04-15T17:00",
+      "lateStart": "2027-02-25T09:00",
+      "lateFinish": "2027-04-14T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "P4"
+    },
+    {
+      "id": "task-mvx6hzlhyppa49",
+      "name": "Build Rev2 production-intent boards",
+      "wbs": "5.1",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-02-26T09:00",
+      "finish": "2027-03-18T17:00",
+      "lateStart": "2027-02-25T09:00",
+      "lateFinish": "2027-03-17T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2BUILD"
+    },
+    {
+      "id": "task-mvx6hzlqc70u50",
+      "name": "Ship and inspect Rev2 boards",
+      "wbs": "5.2",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-03-19T09:00",
+      "finish": "2027-03-23T17:00",
+      "lateStart": "2027-03-18T09:00",
+      "lateFinish": "2027-03-22T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2SHIP"
+    },
+    {
+      "id": "task-mvx6hzm6cftc52",
+      "name": "Rev2 incoming bring-up and early lab sample release",
+      "wbs": "5.4",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-03-24T09:00",
+      "finish": "2027-03-25T17:00",
+      "lateStart": "2027-03-23T09:00",
+      "lateFinish": "2027-03-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2BRING"
+    },
+    {
+      "id": "task-mvx6hzmd27vf53",
+      "name": "Complete Rev2 electrical fix verification alongside lab testing",
+      "wbs": "5.5",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-03-29T09:00",
+      "finish": "2027-04-08T17:00",
+      "lateStart": "2027-03-25T09:00",
+      "lateFinish": "2027-04-07T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R2VERIFY"
+    },
+    {
+      "id": "task-mvx6hzn6mzpx57",
+      "name": "T1 - Mechanical and electrical assembly evaluation",
+      "wbs": "5.9",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-04-09T09:00",
+      "finish": "2027-04-15T17:00",
+      "lateStart": "2027-04-08T09:00",
+      "lateFinish": "2027-04-14T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T1EVAL"
+    },
+    {
+      "id": "task-mvx6hznek8mf58",
+      "name": "G4 - T1 integrated evaluation and correction list accepted",
+      "wbs": "5.10",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-04-15T17:00",
+      "finish": "2027-04-15T17:00",
+      "lateStart": "2027-04-14T17:00",
+      "lateFinish": "2027-04-14T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T1GATE"
+    },
+    {
+      "id": "task-mvx6hznucyne60",
+      "name": "06 - T2 correction and preproduction validation",
+      "wbs": "6",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2027-04-16T09:00",
+      "finish": "2027-06-02T17:00",
+      "lateStart": "2027-04-15T09:00",
+      "lateFinish": "2027-06-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "P5"
+    },
+    {
+      "id": "task-mvx6hznz3ixk61",
+      "name": "Freeze T2 correction package and final test limits",
+      "wbs": "6.1",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-04-16T09:00",
+      "finish": "2027-04-22T17:00",
+      "lateStart": "2027-04-15T09:00",
+      "lateFinish": "2027-04-21T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2ECO"
+    },
+    {
+      "id": "task-mvx6hzo61a5s62",
+      "name": "T2 - Tool corrections and process adjustments",
+      "wbs": "6.2",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-04-23T09:00",
+      "finish": "2027-05-11T17:00",
+      "lateStart": "2027-04-22T09:00",
+      "lateFinish": "2027-05-10T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2FIX"
+    },
+    {
+      "id": "task-mvx6hzoezr2k63",
+      "name": "T2 - Repeat trial and supplier first-article inspection",
+      "wbs": "6.3",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-05-12T09:00",
+      "finish": "2027-05-13T17:00",
+      "lateStart": "2027-05-11T09:00",
+      "lateFinish": "2027-05-12T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2TRIAL"
+    },
+    {
+      "id": "task-mvx6hzomt7s564",
+      "name": "T2 - Air shipment and incoming inspection",
+      "wbs": "6.4",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-05-14T09:00",
+      "finish": "2027-05-18T17:00",
+      "lateStart": "2027-05-13T09:00",
+      "lateFinish": "2027-05-17T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2SHIP"
+    },
+    {
+      "id": "task-mvx6hzouwytm65",
+      "name": "T2 - Integrated mechanical and electrical evaluation",
+      "wbs": "6.5",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-05-19T09:00",
+      "finish": "2027-06-02T17:00",
+      "lateStart": "2027-05-18T09:00",
+      "lateFinish": "2027-06-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2EVAL"
+    },
+    {
+      "id": "task-mvx6hzp0hwuf66",
+      "name": "G5 - T2 preproduction candidate accepted",
+      "wbs": "6.6",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-06-02T17:00",
+      "finish": "2027-06-02T17:00",
+      "lateStart": "2027-06-01T17:00",
+      "lateFinish": "2027-06-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2GATE"
+    },
+    {
+      "id": "task-mvx6hzsi35w482",
+      "name": "08 - Manufacturing system and software handoff gates",
+      "wbs": "8",
+      "parentId": null,
+      "summary": true,
+      "milestone": false,
+      "start": "2027-02-26T09:00",
+      "finish": "2027-07-02T09:00",
+      "lateStart": "2027-04-30T09:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "P7"
+    },
+    {
+      "id": "task-mvx6hztqw0c788",
+      "name": "Approve production material availability and logistics plan",
+      "wbs": "8.6",
+      "parentId": "task-mvx6hzsi35w482",
+      "summary": false,
+      "milestone": false,
+      "start": "2027-06-03T09:00",
+      "finish": "2027-07-01T17:00",
+      "lateStart": "2027-06-02T09:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "MATERIAL"
+    }
+  ],
+  "floatDiagnostic": "Negative float of 1-3 days remains after mixed-country task calendar changes. No finish deadline is present; the existing Rev1-build SNET constraint is unchanged. Forward dates reproduce in the matching headless core, but the backward-pass/calendar discrepancy is unresolved. No dates were pinned or float hidden.",
+  "assumptions": [
+    "Profili is one person; every assigned task remains 100% effort at the operator request. The July 2027 program is precedence/calendar scheduled and not capacity feasible under these allocations.",
+    "Sofeast may staff parallel work. Its 51-slot organization envelope is nonconstraining and is not 51 confirmed people or a supplier commitment; current forecast peak is six simultaneous task slots.",
+    "Ontario public holidays plus customary Civic Holiday and confirmed Dec 24-Jan 1 Christmas-New Year shutdown. Weekend substitutes use next-free-weekday planning convention.",
+    "China statutory festival dates plus assumed 8-day Spring Festival, 5-day May and 7-day October breaks. Annual 2027-2029 arrangements and make-up weekends remain unconfirmed; no weekend factory work assumed.",
+    "Joint task calendars exclude holidays in both countries. Freight waits have no continuous labor assignment; Sofeast remains coordinator in their descriptions.",
+    "JSON, earlier generated CSV, native generation report and first resource-assignment report are historical and not synchronized. Regeneration would replace this IFC maintenance.",
+    "No graphical UI/print verification. IFC is saved via export; app dirty flag may remain."
+  ],
+  "calendarSources": [
+    {
+      "title": "Ontario public holidays",
+      "url": "https://www.ontario.ca/document/your-guide-employment-standards-act-0/public-holidays"
+    },
+    {
+      "title": "PRC holiday rules effective 2025",
+      "url": "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/content/202411/content_6986380.htm"
+    },
+    {
+      "title": "HKO lunar/solar dates 2027",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2027e.pdf"
+    },
+    {
+      "title": "HKO lunar/solar dates 2028",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2028e.pdf"
+    },
+    {
+      "title": "HKO lunar/solar dates 2029",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2029e.pdf"
+    }
+  ],
+  "calendars": [
+    {
+      "id": "cal-default",
+      "name": "Profili / Ontario engineering and lab - Mon-Fri",
+      "description": "Ontario public holidays plus customary Civic Holiday and operator-confirmed Profili Christmas-New Year shutdown, Dec 24-Jan 1 inclusive. Weekend substitute days use next free weekday as planning convention. Calendar covers 2026-2029; retain external lab confirmation requirements.",
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "workStartHour": 9,
+      "workEndHour": 17,
+      "hoursPerDay": 8,
+      "holidays": [
+        {
+          "name": "New Year's Day",
+          "startDate": "2026-01-01",
+          "endDate": "2026-01-01"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2026-02-16",
+          "endDate": "2026-02-16"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2026-04-03",
+          "endDate": "2026-04-03"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2026-05-18",
+          "endDate": "2026-05-18"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2026-07-01",
+          "endDate": "2026-07-01"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2026-08-03",
+          "endDate": "2026-08-03"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2026-09-07",
+          "endDate": "2026-09-07"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2026-10-12",
+          "endDate": "2026-10-12"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2026-12-24",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2026-12-25",
+          "endDate": "2026-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2026-12-26",
+          "endDate": "2026-12-26"
+        },
+        {
+          "name": "Boxing Day - observed planning day",
+          "startDate": "2026-12-28",
+          "endDate": "2026-12-28"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2027-01-01",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2027-02-15",
+          "endDate": "2027-02-15"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2027-03-26",
+          "endDate": "2027-03-26"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2027-05-24",
+          "endDate": "2027-05-24"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2027-07-01",
+          "endDate": "2027-07-01"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2027-08-02",
+          "endDate": "2027-08-02"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2027-09-06",
+          "endDate": "2027-09-06"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2027-10-11",
+          "endDate": "2027-10-11"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2027-12-24",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2027-12-25",
+          "endDate": "2027-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2027-12-26",
+          "endDate": "2027-12-26"
+        },
+        {
+          "name": "Christmas Day - observed planning day",
+          "startDate": "2027-12-27",
+          "endDate": "2027-12-27"
+        },
+        {
+          "name": "Boxing Day - observed planning day",
+          "startDate": "2027-12-28",
+          "endDate": "2027-12-28"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2028-01-01",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "New Year's Day - observed planning day",
+          "startDate": "2028-01-03",
+          "endDate": "2028-01-03"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2028-02-21",
+          "endDate": "2028-02-21"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2028-04-14",
+          "endDate": "2028-04-14"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2028-05-22",
+          "endDate": "2028-05-22"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2028-07-01",
+          "endDate": "2028-07-01"
+        },
+        {
+          "name": "Canada Day - observed planning day",
+          "startDate": "2028-07-03",
+          "endDate": "2028-07-03"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2028-08-07",
+          "endDate": "2028-08-07"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2028-09-04",
+          "endDate": "2028-09-04"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2028-10-09",
+          "endDate": "2028-10-09"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2028-12-24",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2028-12-25",
+          "endDate": "2028-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2028-12-26",
+          "endDate": "2028-12-26"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2029-01-01",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2029-02-19",
+          "endDate": "2029-02-19"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2029-03-30",
+          "endDate": "2029-03-30"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2029-05-21",
+          "endDate": "2029-05-21"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2029-07-01",
+          "endDate": "2029-07-01"
+        },
+        {
+          "name": "Canada Day - observed planning day",
+          "startDate": "2029-07-02",
+          "endDate": "2029-07-02"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2029-08-06",
+          "endDate": "2029-08-06"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2029-09-03",
+          "endDate": "2029-09-03"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2029-10-08",
+          "endDate": "2029-10-08"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2029-12-24",
+          "endDate": "2030-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2029-12-25",
+          "endDate": "2029-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2029-12-26",
+          "endDate": "2029-12-26"
+        }
+      ]
+    },
+    {
+      "id": "rescal-ifc-34cNG1yK5fJmHgD20s77ar",
+      "name": "Sofeast / China engineering and manufacturing - Mon-Fri",
+      "description": "China confirmed by operator. Statutory festival dates from PRC rules and HKO conversion tables. 2027-2029 annual holiday/make-up-workday notices not verified/published as of Nov 1 2026. Eight-day Spring Festival, five-day May and seven-day October windows are planning allowances, not official schedules or factory commitments. Weekend single festivals use next-free-weekday substitutes. No assumed make-up weekend work. Confirm Sofeast/factory calendar.",
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "workStartHour": 9,
+      "workEndHour": 17,
+      "hoursPerDay": 8,
+      "holidays": [
+        {
+          "name": "New Year - China",
+          "startDate": "2027-01-01",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2027-02-05",
+          "endDate": "2027-02-12"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2027-04-05",
+          "endDate": "2027-04-05"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2027-05-01",
+          "endDate": "2027-05-05"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2027-06-09",
+          "endDate": "2027-06-09"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2027-09-15",
+          "endDate": "2027-09-15"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2027-10-01",
+          "endDate": "2027-10-07"
+        },
+        {
+          "name": "New Year - China",
+          "startDate": "2028-01-01",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2028-01-03",
+          "endDate": "2028-01-03"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2028-01-25",
+          "endDate": "2028-02-01"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2028-04-04",
+          "endDate": "2028-04-04"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2028-05-01",
+          "endDate": "2028-05-05"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2028-05-28",
+          "endDate": "2028-05-28"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2028-05-29",
+          "endDate": "2028-05-29"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2028-10-01",
+          "endDate": "2028-10-07"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2028-10-03",
+          "endDate": "2028-10-03"
+        },
+        {
+          "name": "New Year - China",
+          "startDate": "2029-01-01",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2029-02-12",
+          "endDate": "2029-02-19"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2029-04-04",
+          "endDate": "2029-04-04"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2029-05-01",
+          "endDate": "2029-05-05"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2029-06-16",
+          "endDate": "2029-06-16"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2029-06-18",
+          "endDate": "2029-06-18"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2029-09-22",
+          "endDate": "2029-09-22"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2029-09-24",
+          "endDate": "2029-09-24"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2029-10-01",
+          "endDate": "2029-10-07"
+        }
+      ]
+    },
+    {
+      "id": "rescal-ifc-26yDsAFouU3zE_fDZc5mcs",
+      "name": "Express transport elapsed days - 7 days/week",
+      "description": "Calendar-day freight allowance; actual customs/carrier schedule and local receiving availability must be confirmed. Evaluation uses engineering calendar.",
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "workStartHour": 9,
+      "workEndHour": 17,
+      "hoursPerDay": 8,
+      "holidays": []
+    },
+    {
+      "id": "rescal-ifc-24iSZJcoIpLP76BqRIOg4G",
+      "name": "Profili + Sofeast / lab joint working days",
+      "description": "Intersection of Ontario/Profili and China/Sofeast availability: excludes both holiday sets. Used for joint tasks and lab work needing both locations. China annual arrangements remain planning assumptions; see individual calendars.",
+      "workDays": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "workStartHour": 9,
+      "workEndHour": 17,
+      "hoursPerDay": 8,
+      "holidays": [
+        {
+          "name": "New Year's Day",
+          "startDate": "2026-01-01",
+          "endDate": "2026-01-01"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2026-02-16",
+          "endDate": "2026-02-16"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2026-04-03",
+          "endDate": "2026-04-03"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2026-05-18",
+          "endDate": "2026-05-18"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2026-07-01",
+          "endDate": "2026-07-01"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2026-08-03",
+          "endDate": "2026-08-03"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2026-09-07",
+          "endDate": "2026-09-07"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2026-10-12",
+          "endDate": "2026-10-12"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2026-12-24",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2026-12-25",
+          "endDate": "2026-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2026-12-26",
+          "endDate": "2026-12-26"
+        },
+        {
+          "name": "Boxing Day - observed planning day",
+          "startDate": "2026-12-28",
+          "endDate": "2026-12-28"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2027-01-01",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "New Year - China",
+          "startDate": "2027-01-01",
+          "endDate": "2027-01-01"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2027-02-05",
+          "endDate": "2027-02-12"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2027-02-15",
+          "endDate": "2027-02-15"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2027-03-26",
+          "endDate": "2027-03-26"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2027-04-05",
+          "endDate": "2027-04-05"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2027-05-01",
+          "endDate": "2027-05-05"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2027-05-24",
+          "endDate": "2027-05-24"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2027-06-09",
+          "endDate": "2027-06-09"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2027-07-01",
+          "endDate": "2027-07-01"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2027-08-02",
+          "endDate": "2027-08-02"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2027-09-06",
+          "endDate": "2027-09-06"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2027-09-15",
+          "endDate": "2027-09-15"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2027-10-01",
+          "endDate": "2027-10-07"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2027-10-11",
+          "endDate": "2027-10-11"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2027-12-24",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2027-12-25",
+          "endDate": "2027-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2027-12-26",
+          "endDate": "2027-12-26"
+        },
+        {
+          "name": "Christmas Day - observed planning day",
+          "startDate": "2027-12-27",
+          "endDate": "2027-12-27"
+        },
+        {
+          "name": "Boxing Day - observed planning day",
+          "startDate": "2027-12-28",
+          "endDate": "2027-12-28"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2028-01-01",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "New Year - China",
+          "startDate": "2028-01-01",
+          "endDate": "2028-01-01"
+        },
+        {
+          "name": "New Year's Day - observed planning day",
+          "startDate": "2028-01-03",
+          "endDate": "2028-01-03"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2028-01-03",
+          "endDate": "2028-01-03"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2028-01-25",
+          "endDate": "2028-02-01"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2028-02-21",
+          "endDate": "2028-02-21"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2028-04-04",
+          "endDate": "2028-04-04"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2028-04-14",
+          "endDate": "2028-04-14"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2028-05-01",
+          "endDate": "2028-05-05"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2028-05-22",
+          "endDate": "2028-05-22"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2028-05-28",
+          "endDate": "2028-05-28"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2028-05-29",
+          "endDate": "2028-05-29"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2028-07-01",
+          "endDate": "2028-07-01"
+        },
+        {
+          "name": "Canada Day - observed planning day",
+          "startDate": "2028-07-03",
+          "endDate": "2028-07-03"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2028-08-07",
+          "endDate": "2028-08-07"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2028-09-04",
+          "endDate": "2028-09-04"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2028-10-01",
+          "endDate": "2028-10-07"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2028-10-03",
+          "endDate": "2028-10-03"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2028-10-09",
+          "endDate": "2028-10-09"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2028-12-24",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2028-12-25",
+          "endDate": "2028-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2028-12-26",
+          "endDate": "2028-12-26"
+        },
+        {
+          "name": "New Year's Day",
+          "startDate": "2029-01-01",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "New Year - China",
+          "startDate": "2029-01-01",
+          "endDate": "2029-01-01"
+        },
+        {
+          "name": "Spring Festival - planning break; annual arrangement pending",
+          "startDate": "2029-02-12",
+          "endDate": "2029-02-19"
+        },
+        {
+          "name": "Family Day",
+          "startDate": "2029-02-19",
+          "endDate": "2029-02-19"
+        },
+        {
+          "name": "Good Friday",
+          "startDate": "2029-03-30",
+          "endDate": "2029-03-30"
+        },
+        {
+          "name": "Qingming",
+          "startDate": "2029-04-04",
+          "endDate": "2029-04-04"
+        },
+        {
+          "name": "Labour Day - planning break; annual arrangement pending",
+          "startDate": "2029-05-01",
+          "endDate": "2029-05-05"
+        },
+        {
+          "name": "Victoria Day",
+          "startDate": "2029-05-21",
+          "endDate": "2029-05-21"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "startDate": "2029-06-16",
+          "endDate": "2029-06-16"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2029-06-18",
+          "endDate": "2029-06-18"
+        },
+        {
+          "name": "Canada Day",
+          "startDate": "2029-07-01",
+          "endDate": "2029-07-01"
+        },
+        {
+          "name": "Canada Day - observed planning day",
+          "startDate": "2029-07-02",
+          "endDate": "2029-07-02"
+        },
+        {
+          "name": "Civic Holiday - company observance",
+          "startDate": "2029-08-06",
+          "endDate": "2029-08-06"
+        },
+        {
+          "name": "Labour Day",
+          "startDate": "2029-09-03",
+          "endDate": "2029-09-03"
+        },
+        {
+          "name": "Mid-Autumn Festival",
+          "startDate": "2029-09-22",
+          "endDate": "2029-09-22"
+        },
+        {
+          "name": "China festival substitute - planning day; annual arrangement pending",
+          "startDate": "2029-09-24",
+          "endDate": "2029-09-24"
+        },
+        {
+          "name": "National Day - planning break; annual arrangement pending",
+          "startDate": "2029-10-01",
+          "endDate": "2029-10-07"
+        },
+        {
+          "name": "Thanksgiving",
+          "startDate": "2029-10-08",
+          "endDate": "2029-10-08"
+        },
+        {
+          "name": "Profili Christmas-New Year shutdown",
+          "startDate": "2029-12-24",
+          "endDate": "2030-01-01"
+        },
+        {
+          "name": "Christmas Day",
+          "startDate": "2029-12-25",
+          "endDate": "2029-12-25"
+        },
+        {
+          "name": "Boxing Day",
+          "startDate": "2029-12-26",
+          "endDate": "2029-12-26"
+        }
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "task-mvx6hzerk0of13",
+      "name": "Planning start - Rev0 complete; Rev1 schematic in review and layout underway",
+      "wbs": "1.1",
+      "parentId": "task-mvx6hzemxupj12",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-11-02T09:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2026-10-29T09:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "START"
+    },
+    {
+      "id": "task-mvx6hzfunvvq20",
+      "name": "G0 - Requirements, test strategy and supplier assumptions accepted",
+      "wbs": "1.8",
+      "parentId": "task-mvx6hzemxupj12",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-11-27T17:00",
+      "finish": "2026-11-27T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": 29,
+      "critical": false,
+      "planId": "G0"
+    },
+    {
+      "id": "task-mvx6hzgyh4zj26",
+      "name": "G1 - Release Rev1 PCBA prototype run",
+      "wbs": "2.4",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-12-01T17:00",
+      "finish": "2026-12-01T17:00",
+      "lateStart": "2026-11-27T17:00",
+      "lateFinish": "2026-11-27T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "R1REL"
+    },
+    {
+      "id": "task-mvx6hzjlvyso39",
+      "name": "G2 - Rev1 EVT findings and Rev2 change list approved",
+      "wbs": "3.8",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1EVT"
+    },
+    {
+      "id": "task-mvx6hzjypanz41",
+      "name": "G3a - Cellular SIM and satellite launch decision",
+      "wbs": "4.1",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "CONNECTDEC"
+    },
+    {
+      "id": "task-mvx6hzl44qjk47",
+      "name": "G3 - Release Rev2 PCBA and housing tooling",
+      "wbs": "4.7",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-02-25T17:00",
+      "finish": "2027-02-25T17:00",
+      "lateStart": "2027-02-24T17:00",
+      "lateFinish": "2027-02-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "FREEZE"
+    },
+    {
+      "id": "task-mvx6hznek8mf58",
+      "name": "G4 - T1 integrated evaluation and correction list accepted",
+      "wbs": "5.10",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-04-15T17:00",
+      "finish": "2027-04-15T17:00",
+      "lateStart": "2027-04-14T17:00",
+      "lateFinish": "2027-04-14T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T1GATE"
+    },
+    {
+      "id": "task-mvx6hzp0hwuf66",
+      "name": "G5 - T2 preproduction candidate accepted",
+      "wbs": "6.6",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-06-02T17:00",
+      "finish": "2027-06-02T17:00",
+      "lateStart": "2027-06-01T17:00",
+      "lateFinish": "2027-06-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2GATE"
+    },
+    {
+      "id": "task-mvx6hzsb53rt81",
+      "name": "G6 - Qualification and US/Canada release evidence accepted",
+      "wbs": "7.14",
+      "parentId": "task-mvx6hzp72upm67",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-06-21T17:00",
+      "finish": "2027-06-21T17:00",
+      "lateStart": "2027-06-30T17:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": 7,
+      "critical": false,
+      "planId": "MARKET"
+    },
+    {
+      "id": "task-mvx6hztyf9jy89",
+      "name": "G7 - Controlled pilot build readiness",
+      "wbs": "8.7",
+      "parentId": "task-mvx6hzsi35w482",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-07-02T09:00",
+      "finish": "2027-07-02T09:00",
+      "lateStart": "2027-06-30T17:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "PVTREADY"
+    },
+    {
+      "id": "task-mvx6hzv7rnim95",
+      "name": "G8 - Authorize mass production release",
+      "wbs": "9.5",
+      "parentId": "task-mvx6hzu5p9fn90",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-08-18T17:00",
+      "finish": "2027-08-18T17:00",
+      "lateStart": "2027-08-18T17:00",
+      "lateFinish": "2027-08-18T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "MPREL"
+    },
+    {
+      "id": "task-mvx6hzvtve8998",
+      "name": "G9 - First mass-production lot ready to ship",
+      "wbs": "9.8",
+      "parentId": "task-mvx6hzu5p9fn90",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-09-23T17:00",
+      "finish": "2027-09-23T17:00",
+      "lateStart": "2027-09-23T17:00",
+      "lateFinish": "2027-09-23T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "MP"
+    }
+  ],
+  "criticalPath": [
+    "task-mvx6hzerk0of13",
+    "task-mvx6hzewiq1u14",
+    "task-mvx6hzg5ze3122",
+    "task-mvx6hzf10h8315",
+    "task-mvx6hzf73fyk16",
+    "task-mvx6hzgklu3u24",
+    "task-mvx6hzfde71d17",
+    "task-mvx6hzgsad5c25",
+    "task-mvx6hzgyh4zj26",
+    "task-mvx6hzi47aen32",
+    "task-mvx6hzib1vym33",
+    "task-mvx6hzirsbgv35",
+    "task-mvx6hziyj7br36",
+    "task-mvx6hzj7pfp337",
+    "task-mvx6hzje9odx38",
+    "task-mvx6hzjlvyso39",
+    "task-mvx6hzjypanz41",
+    "task-mvx6hzk4zt5q42",
+    "task-mvx6hzkcirrv43",
+    "task-mvx6hzl44qjk47",
+    "task-mvx6hzlhyppa49",
+    "task-mvx6hzlqc70u50",
+    "task-mvx6hzm6cftc52",
+    "task-mvx6hzmd27vf53",
+    "task-mvx6hzn6mzpx57",
+    "task-mvx6hznek8mf58",
+    "task-mvx6hznz3ixk61",
+    "task-mvx6hzo61a5s62",
+    "task-mvx6hzoezr2k63",
+    "task-mvx6hzomt7s564",
+    "task-mvx6hzouwytm65",
+    "task-mvx6hzp0hwuf66",
+    "task-mvx6hztqw0c788",
+    "task-mvx6hztyf9jy89",
+    "task-mvx6hzuaqmok91",
+    "task-mvx6hzujuv9292",
+    "task-mvx6hzur2vdc93",
+    "task-mvx6hzv0wy5594",
+    "task-mvx6hzv7rnim95",
+    "task-mvx6hzvenas396",
+    "task-mvx6hzvm97es97",
+    "task-mvx6hzvtve8998"
+  ],
+  "resources": [
+    {
+      "id": "res-ifc-0_fGb$BxX3e8ONORtbcaj0",
+      "name": "Profili",
+      "type": "LABOR",
+      "description": "Profili: one person, maximum one full-time unit per working day. Operator explicitly requests full-time effort for every assigned task, including reviews, labs and software delivery gates. Ontario public holidays plus customary Civic Holiday and confirmed Christmas-New Year shutdown. Resource leveling may extend the forecast; retain the initial proposal baseline.",
+      "maxUnits": 1,
+      "color": "#1E293B"
+    },
+    {
+      "id": "res-ifc-0CBS97eRwdEQiUT1eyvxRk",
+      "name": "Sofeast",
+      "type": "SUBCONTRACTOR",
+      "description": "Sofeast: China manufacturing partner; operator permits parallel staffing. Mechanical engineering, manufacturing, tooling, supply chain, test/certification assistance and peer EE review. Modeled as an unconstrained organization using 51 concurrent task slots (one for each remaining assigned task), not 51 confirmed people or a supplier capacity commitment. China holiday calendar has explicit annual-arrangement assumptions. Freight waiting carries no continuous staff reservation.",
+      "maxUnits": 51,
+      "color": "#B91C1C",
+      "calendarId": "rescal-ifc-34cNG1yK5fJmHgD20s77ar"
+    }
+  ],
+  "assignments": [
+    {
+      "planId": "SCOPE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SIMPILOT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "NTNEVAL",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SCHCLOSE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SCHCLOSE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LAYOUT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LAYOUT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1DFM",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1DFM",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWREV1",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BRING",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BRING",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1POWER",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1POWER",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1RF",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1RF",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1SENSE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1SENSE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2SCHEM",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2SCHEM",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2LAYOUT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2LAYOUT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FMEA",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FMEA",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWDVT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BRING",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BRING",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2VERIFY",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2VERIFY",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1EVAL",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1EVAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRECOMP",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRECOMP",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2ECO",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2ECO",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2EVAL",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2EVAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABBOOK",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABBOOK",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABSAMPLE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABSAMPLE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALPOWER",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALPOWER",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALASSEMBLY",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALASSEMBLY",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FCCIC",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FCCIC",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLAPPROVE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLAPPROVE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLFINAL",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "CELLFINAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BTSIG",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BTSIG",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALDELTA",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALDELTA",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "REGDOC",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "REGDOC",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "RETESTBUF",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "RETESTBUF",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXDES",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXDES",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXBUILD",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "FIXBUILD",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWFACT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SWPRODUCT",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PILOTFIELD",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTCLOSE",
+      "resource": "Profili",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTCLOSE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "LABPLAN",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SUPPLY",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MEARCH",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "VENTSELECT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PRINTS",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PROTOME",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R1BUILD",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MEDFM",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "TOOLQUOTE",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "R2BUILD",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1CUT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T1TRIAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2FIX",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "T2TRIAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "QUALENV",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "BATT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "SOP",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MATERIAL",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "PVTBUILD",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MPBUILD",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    },
+    {
+      "planId": "MPAUDIT",
+      "resource": "Sofeast",
+      "unitsPerDay": 1
+    }
+  ]
+}

@@ -1,0 +1,1380 @@
+{
+  "updatedAt": "2026-11-01T05:04:12.855Z",
+  "file": "carport-hw.ifc",
+  "sha256": "031ca6ac14e8e3e18fcb89077c108a061c7c9d44dc1b7b3cb6b187f18b25449a",
+  "schema": "IFC4X3_ADD2",
+  "plannerVersion": "2026.44.0",
+  "plannerCommit": "2f6bc4d8220a255d1f7a493b9e39141ac2caa821",
+  "editingRoute": "Existing desktop document via live MCP; bulk assignment effort revisions, task leveling priority, previewed leveling constrained to float, time-phased capacity, native IFC export",
+  "counts": {
+    "tasks": 86,
+    "dependencies": 142,
+    "milestones": 12,
+    "calendars": 4,
+    "resources": 2,
+    "assignments": 89,
+    "baselines": 1
+  },
+  "outcome": {
+    "resourceConflictsResolvedInModel": true,
+    "pilotStart": "2027-07-02T09:00",
+    "shipmentRelease": "2027-09-23T17:00",
+    "allMilestoneCivilDatesUnchanged": true,
+    "fullTimeAssignments": 12,
+    "partTimeAssignments": 26,
+    "previousProfiliPersonDays": 394,
+    "revisedProfiliPersonDays": 187,
+    "prePilotProfiliPersonDays": 183
+  },
+  "resourceLoad": [
+    {
+      "resourceId": "res-mvxcevh9wb1d6",
+      "resourceName": "Profili",
+      "peakLoad": 2,
+      "peakDate": "2026-11-11",
+      "overallocatedDayCount": 0,
+      "loadSum": 187,
+      "capacitySum": 311,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-08-18"
+    },
+    {
+      "resourceId": "res-mvxcevha78nl7",
+      "resourceName": "Sofeast",
+      "peakLoad": 6,
+      "peakDate": "2027-03-29",
+      "overallocatedDayCount": 0,
+      "loadSum": 499,
+      "capacitySum": 11271,
+      "spanStart": "2026-11-02",
+      "spanEnd": "2027-09-23"
+    }
+  ],
+  "capacity": {
+    "basePeople": 1,
+    "peakPeople": 2,
+    "peakWindows": [
+      {
+        "from": "2026-11-02",
+        "to": "2026-11-08"
+      },
+      {
+        "from": "2026-11-11",
+        "to": "2026-11-24"
+      },
+      {
+        "from": "2027-02-03",
+        "to": "2027-02-04"
+      },
+      {
+        "from": "2027-02-16",
+        "to": "2027-02-18"
+      },
+      {
+        "from": "2027-02-26",
+        "to": "2027-03-18"
+      },
+      {
+        "from": "2027-03-29",
+        "to": "2027-04-04"
+      },
+      {
+        "from": "2027-04-06",
+        "to": "2027-05-02"
+      },
+      {
+        "from": "2027-05-06",
+        "to": "2027-06-08"
+      },
+      {
+        "from": "2027-06-10",
+        "to": "2027-06-21"
+      }
+    ],
+    "availabilitySteps": [
+      {
+        "from": "2026-11-02",
+        "maxUnits": 2
+      },
+      {
+        "from": "2026-11-09",
+        "maxUnits": 1
+      },
+      {
+        "from": "2026-11-11",
+        "maxUnits": 2
+      },
+      {
+        "from": "2026-11-25",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-03",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-02-05",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-16",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-02-19",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-02-26",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-03-19",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-03-29",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-04-05",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-04-06",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-05-03",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-05-06",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-06-09",
+        "maxUnits": 1
+      },
+      {
+        "from": "2027-06-10",
+        "maxUnits": 2
+      },
+      {
+        "from": "2027-06-22",
+        "maxUnits": 1
+      }
+    ],
+    "interpretation": "Operator-authorized planning capacity; second person is assumed only in windows where modeled demand exceeds one. Both follow Profili Ontario/shutdown calendar. No actual staffing commitment is asserted."
+  },
+  "effortBasis": "Operator chose to keep July and revisit effort/support assignments. Hands-on electrical design, coding, bring-up, fix verification and fixture architecture retain 100%. Reviews, external lab/certification campaigns, Sofeast-led integration and fixture build, provider response windows and pilot soak use estimated 10-50% Profili technical support. Campaign/lead-time durations and acceptance evidence remain unchanged.",
+  "estimates": [
+    {
+      "wbs": "1.2",
+      "taskId": "task-mvx6hzewiq1u14",
+      "name": "Confirm US/Canada launch requirements and installation envelope",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.5,
+      "personDays": 2.5,
+      "reason": "Requirements definition and review: about half-time over the decision window."
+    },
+    {
+      "wbs": "1.6",
+      "taskId": "task-mvx6hzfi88jg18",
+      "name": "Evaluate physical SIM / eUICC provider and roaming",
+      "days": 15,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 1.5,
+      "reason": "Provider/SIM comparison and integration questions; provider response window is not continuous engineering effort."
+    },
+    {
+      "wbs": "1.7",
+      "taskId": "task-mvx6hzfn5qps19",
+      "name": "Evaluate nRF9151 satellite service and supported hardware/firmware",
+      "days": 20,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 5,
+      "reason": "Satellite feasibility evaluation and targeted bench/software checks; no product implementation commitment."
+    },
+    {
+      "wbs": "2.1",
+      "taskId": "task-mvx6hzg5ze3122",
+      "name": "Close Rev1 schematic review and BOM metadata",
+      "days": 7,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 7,
+      "reason": "Hands-on schematic/BOM review closure and correction."
+    },
+    {
+      "wbs": "2.2",
+      "taskId": "task-mvx6hzgklu3u24",
+      "name": "Complete Rev1 routing and RF / power / mechanical review",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 10,
+      "reason": "Hands-on PCB routing and electrical/RF closure."
+    },
+    {
+      "wbs": "2.3",
+      "taskId": "task-mvx6hzgsad5c25",
+      "name": "Rev1 PCBA DFM, AVL availability and release package",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 1.25,
+      "reason": "Profili reviews electrical DFM and controls release; Sofeast handles AVL/sourcing/manufacturing coordination."
+    },
+    {
+      "wbs": "3.3",
+      "taskId": "task-mvx6hzijzytg34",
+      "name": "External gate - Rev1 bring-up firmware and diagnostic tools",
+      "days": 7,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 7,
+      "reason": "Firmware and diagnostic-tool delivery work allowance."
+    },
+    {
+      "wbs": "3.4",
+      "taskId": "task-mvx6hzirsbgv35",
+      "name": "Bring up Rev1 PCBA with current-limited staged power",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 5,
+      "reason": "Hands-on initial electrical bring-up."
+    },
+    {
+      "wbs": "3.5",
+      "taskId": "task-mvx6hziyj7br36",
+      "name": "Rev1 power, input fault screening and radio transient tests",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.5,
+      "personDays": 5,
+      "reason": "Hands-on electrical test setup/data review interleaved with screening runs."
+    },
+    {
+      "wbs": "3.6",
+      "taskId": "task-mvx6hzj7pfp337",
+      "name": "Rev1 antenna, coexistence and EMC pre-scan",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 2.5,
+      "reason": "Sofeast/lab runs pre-scan; Profili supplies firmware/configuration and reviews findings."
+    },
+    {
+      "wbs": "3.7",
+      "taskId": "task-mvx6hzje9odx38",
+      "name": "Rev1 integrated membrane, housing and sensor experiments",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 2.5,
+      "reason": "Sofeast leads mechanical/membrane experiments; Profili supports sensors, measurements and electrical integration."
+    },
+    {
+      "wbs": "4.2",
+      "taskId": "task-mvx6hzk4zt5q42",
+      "name": "Rev2 electrical changes, worst-case closure and schematic review",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 10,
+      "reason": "Hands-on Rev2 schematic and electrical changes."
+    },
+    {
+      "wbs": "4.3",
+      "taskId": "task-mvx6hzkcirrv43",
+      "name": "Rev2 layout, RF and DFM review",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 10,
+      "reason": "Hands-on Rev2 PCB layout and electrical/RF closure."
+    },
+    {
+      "wbs": "4.5",
+      "taskId": "task-mvx6hzkqqsh245",
+      "name": "Cross-discipline design risk and verification review",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 1.25,
+      "reason": "Cross-discipline review participation; Sofeast leads mechanical/manufacturing disposition."
+    },
+    {
+      "wbs": "5.3",
+      "taskId": "task-mvx6hzlyd3b451",
+      "name": "External gate - Rev2 DVT and RF test firmware",
+      "days": 15,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 15,
+      "reason": "DVT/RF test firmware delivery work allowance."
+    },
+    {
+      "wbs": "5.4",
+      "taskId": "task-mvx6hzm6cftc52",
+      "name": "Rev2 incoming bring-up and early lab sample release",
+      "days": 2,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 2,
+      "reason": "Hands-on incoming electrical bring-up."
+    },
+    {
+      "wbs": "5.5",
+      "taskId": "task-mvx6hzmd27vf53",
+      "name": "Complete Rev2 electrical fix verification alongside lab testing",
+      "days": 8,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 8,
+      "reason": "Hands-on verification of Rev2 electrical fixes."
+    },
+    {
+      "wbs": "5.9",
+      "taskId": "task-mvx6hzn6mzpx57",
+      "name": "T1 - Mechanical and electrical assembly evaluation",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 1.25,
+      "reason": "Sofeast leads mechanical/assembly evaluation; Profili supplies electrical integration support."
+    },
+    {
+      "wbs": "5.11",
+      "taskId": "task-mvx6hznlkmob59",
+      "name": "Rev2 EMC / RF readiness pre-scan using prototype housing",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 2.5,
+      "reason": "Lab/Sofeast executes pre-scan; Profili handles configuration, data review and technical queries."
+    },
+    {
+      "wbs": "6.1",
+      "taskId": "task-mvx6hznz3ixk61",
+      "name": "Freeze T2 correction package and final test limits",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 1.25,
+      "reason": "Profili reviews electrical implications and test limits; Sofeast owns mechanical/tool correction package."
+    },
+    {
+      "wbs": "6.5",
+      "taskId": "task-mvx6hzouwytm65",
+      "name": "T2 - Integrated mechanical and electrical evaluation",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 2.5,
+      "reason": "Sofeast leads integrated T2 evaluation; Profili supports electrical checks and triage."
+    },
+    {
+      "wbs": "7.1",
+      "taskId": "task-mvx6hzpc406l68",
+      "name": "Confirm lab bookings, sample matrix and regulatory configuration",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 0.5,
+      "reason": "Sofeast/lab booking and campaign coordination; Profili reviews electrical configurations."
+    },
+    {
+      "wbs": "7.2",
+      "taskId": "task-mvx6hzpi414u69",
+      "name": "Accept representative T1 assemblies for formal lab work",
+      "days": 2,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 0.5,
+      "reason": "Sample/configuration review and lab acceptance support."
+    },
+    {
+      "wbs": "7.3",
+      "taskId": "task-mvx6hzpqtqpx70",
+      "name": "Rev2 vehicle power qualification - prototype housing allowed",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.2,
+      "personDays": 2,
+      "reason": "Lab/Sofeast executes power qualification; Profili supports fixtures/firmware, questions and results review."
+    },
+    {
+      "wbs": "7.4",
+      "taskId": "task-mvx6hzpykml771",
+      "name": "T1 accessible-assembly ESD and enclosed thermal confirmation",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.2,
+      "personDays": 1,
+      "reason": "Lab/Sofeast executes ESD/thermal campaign; Profili supports configuration and results review."
+    },
+    {
+      "wbs": "7.6",
+      "taskId": "task-mvx6hzqdsqou73",
+      "name": "T1 US FCC / Canada ISED host RF, emissions and exposure assessment",
+      "days": 30,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 3,
+      "reason": "External RF/EMC/exposure campaign; Profili technical liaison and firmware/configuration support."
+    },
+    {
+      "wbs": "7.7",
+      "taskId": "task-mvx6hzqmpxyu74",
+      "name": "Rev2 cellular/operator and conditional NTN conducted / protocol campaign",
+      "days": 20,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 2,
+      "reason": "External conducted/protocol campaign; Profili technical liaison and test-mode support."
+    },
+    {
+      "wbs": "7.8",
+      "taskId": "task-mvx6hzqvuq4g75",
+      "name": "T1 cellular OTA / antenna and provider acceptance completion",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 1,
+      "reason": "External OTA/provider campaign; Profili technical liaison and findings review."
+    },
+    {
+      "wbs": "7.9",
+      "taskId": "task-mvx6hzr4oc1z76",
+      "name": "Complete Bluetooth product qualification",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 1,
+      "reason": "Qualification administration/design reuse evidence; Profili supplies software/configuration and company-side review."
+    },
+    {
+      "wbs": "7.11",
+      "taskId": "task-mvx6hzrmflyr78",
+      "name": "Preliminary T2 qualification change-impact review",
+      "days": 3,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 0.75,
+      "reason": "Electrical/firmware delta and retest-impact review; Sofeast/lab covers mechanical/process effects."
+    },
+    {
+      "wbs": "7.12",
+      "taskId": "task-mvx6hzruhtj679",
+      "name": "Prepare labels, installation instructions and compliance file",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 2.5,
+      "reason": "Profili reviews technical accuracy; Sofeast compiles labels, instructions and compliance evidence."
+    },
+    {
+      "wbs": "7.13",
+      "taskId": "task-mvx6hzs2m9bu80",
+      "name": "Final T2 qualification disposition and affected retest reserve",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 0.2,
+      "personDays": 2,
+      "reason": "Lab/Sofeast executes affected tests; Profili supports technical disposition and findings."
+    },
+    {
+      "wbs": "8.1",
+      "taskId": "task-mvx6hzsn8ztu83",
+      "name": "Design production programming and end-of-line fixtures",
+      "days": 10,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 10,
+      "reason": "Hands-on programming/test architecture and electrical fixture interface design."
+    },
+    {
+      "wbs": "8.2",
+      "taskId": "task-mvx6hzsvyjkl84",
+      "name": "Build and correlate fixtures with golden/reference units",
+      "days": 15,
+      "previousUnits": 1,
+      "unitsPerDay": 0.25,
+      "personDays": 3.75,
+      "reason": "Sofeast builds/correlates fixtures; Profili supplies firmware interfaces and technical debugging."
+    },
+    {
+      "wbs": "8.3",
+      "taskId": "task-mvx6hzt2kde885",
+      "name": "External gate - Factory firmware, provisioning and test tools",
+      "days": 20,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 20,
+      "reason": "Factory firmware/provisioning/test-tool delivery work allowance."
+    },
+    {
+      "wbs": "8.4",
+      "taskId": "task-mvx6hztaclam86",
+      "name": "External gate - Integrated product release candidate",
+      "days": 30,
+      "previousUnits": 1,
+      "unitsPerDay": 1,
+      "personDays": 30,
+      "reason": "Integrated product software release-candidate delivery work allowance."
+    },
+    {
+      "wbs": "9.3",
+      "taskId": "task-mvx6hzur2vdc93",
+      "name": "Supervised US/Canada vehicle pilot and soak",
+      "days": 15,
+      "previousUnits": 1,
+      "unitsPerDay": 0.1,
+      "personDays": 1.5,
+      "reason": "Vehicle soak is elapsed observation; Profili monitors logs and triages issues part-time."
+    },
+    {
+      "wbs": "9.4",
+      "taskId": "task-mvx6hzv0wy5594",
+      "name": "Close pilot defects and approve yield / quality evidence",
+      "days": 5,
+      "previousUnits": 1,
+      "unitsPerDay": 0.5,
+      "personDays": 2.5,
+      "reason": "Profili addresses electrical/software defects; Sofeast closes process/yield and quality findings."
+    }
+  ],
+  "sequencing": {
+    "constrainToFloat": true,
+    "priorityChange": {
+      "task": "External gate - Integrated product release candidate",
+      "wbs": "8.4",
+      "before": 500,
+      "after": 400,
+      "reason": "Prioritize factory test/fixture readiness before the product release candidate in the resource allocator; no dependency or date constraint was added."
+    },
+    "taskShifts": [
+      {
+        "oldStart": "2026-11-09T09:00",
+        "newStart": "2026-11-20T09:00",
+        "delta": 9,
+        "taskId": "task-mvx6hzfi88jg18",
+        "name": "Evaluate physical SIM / eUICC provider and roaming",
+        "wbs": "1.6",
+        "finish": "2026-12-10T17:00"
+      },
+      {
+        "oldStart": "2026-11-09T09:00",
+        "newStart": "2026-11-20T09:00",
+        "delta": 9,
+        "taskId": "task-mvx6hzfn5qps19",
+        "name": "Evaluate nRF9151 satellite service and supported hardware/firmware",
+        "wbs": "1.7",
+        "finish": "2026-12-17T17:00"
+      },
+      {
+        "oldStart": "2027-02-26T09:00",
+        "newStart": "2027-03-05T09:00",
+        "delta": 5,
+        "taskId": "task-mvx6hzsn8ztu83",
+        "name": "Design production programming and end-of-line fixtures",
+        "wbs": "8.1",
+        "finish": "2027-03-18"
+      },
+      {
+        "oldStart": "2027-03-19T09:00",
+        "newStart": "2027-04-13T09:00",
+        "delta": 16,
+        "taskId": "task-mvx6hzt2kde885",
+        "name": "External gate - Factory firmware, provisioning and test tools",
+        "wbs": "8.3",
+        "finish": "2027-05-10T17:00"
+      },
+      {
+        "oldStart": "2027-03-19T09:00",
+        "newStart": "2027-05-11T09:00",
+        "delta": 36,
+        "taskId": "task-mvx6hztaclam86",
+        "name": "External gate - Integrated product release candidate",
+        "wbs": "8.4",
+        "finish": "2027-06-22T17:00"
+      }
+    ],
+    "delays": {
+      "task-mvx6hzfn5qps19": 9,
+      "task-mvx6hzfi88jg18": 9,
+      "task-mvx6hzsn8ztu83": 5,
+      "task-mvx6hzt2kde885": 16,
+      "task-mvx6hztaclam86": 36
+    },
+    "unresolved": {},
+    "unresolvedReasons": {},
+    "levelingPreviewWarnings": []
+  },
+  "checks": [
+    "Current live document identified; disk/live before-state IFC preserved",
+    "No assignment mutation rejections",
+    "Zero overallocated days for Profili and Sofeast in the final live histogram",
+    "Leveling preview and final application report zero unresolved conflicts and unchanged project finish",
+    "All milestone civil dates and July pilot phase start preserved",
+    "Hierarchy, links, project metadata, calendars, leaf durations, actuals/progress, notes, custom fields and baseline data/selection preserved",
+    "All 38 Profili effort values match the recorded per-task estimates; other resource assignments/units unchanged",
+    "Native IFC integrity passed",
+    "Native reader/writer round-trip preserves planning data ignoring generated assignment IDs",
+    "Native document-open recalculation preserves all day-task civil dates and hour-task exact times; zero native warnings",
+    "Acyclic network; all non-start leaves have predecessors and all non-final leaves reach completion",
+    "Independent schema/EXPRESS validation: zero findings (see reports/ifc-schema-validation.json)"
+  ],
+  "schemaValidationReport": "reports/ifc-schema-validation.json",
+  "baselineStatus": "Initial proposal remains unapproved; baseline data and active/comparison selection unchanged; no new baseline captured",
+  "milestones": [
+    {
+      "id": "task-mvx6hzerk0of13",
+      "name": "Planning start - Rev0 complete; Rev1 schematic in review and layout underway",
+      "wbs": "1.1",
+      "parentId": "task-mvx6hzemxupj12",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-11-02T09:00",
+      "finish": "2026-11-02T09:00",
+      "lateStart": "2026-10-29T09:00",
+      "lateFinish": "2026-10-29T09:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "START"
+    },
+    {
+      "id": "task-mvx6hzfunvvq20",
+      "name": "G0 - Requirements, test strategy and supplier assumptions accepted",
+      "wbs": "1.8",
+      "parentId": "task-mvx6hzemxupj12",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-11-27T17:00",
+      "finish": "2026-11-27T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": 29,
+      "critical": false,
+      "planId": "G0"
+    },
+    {
+      "id": "task-mvx6hzgyh4zj26",
+      "name": "G1 - Release Rev1 PCBA prototype run",
+      "wbs": "2.4",
+      "parentId": "task-mvx6hzg0cbna21",
+      "summary": false,
+      "milestone": true,
+      "start": "2026-12-01T17:00",
+      "finish": "2026-12-01T17:00",
+      "lateStart": "2026-11-27T17:00",
+      "lateFinish": "2026-11-27T17:00",
+      "totalFloat": -2,
+      "critical": true,
+      "planId": "R1REL"
+    },
+    {
+      "id": "task-mvx6hzjlvyso39",
+      "name": "G2 - Rev1 EVT findings and Rev2 change list approved",
+      "wbs": "3.8",
+      "parentId": "task-mvx6hzhz4fet31",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "R1EVT"
+    },
+    {
+      "id": "task-mvx6hzjypanz41",
+      "name": "G3a - Cellular SIM and satellite launch decision",
+      "wbs": "4.1",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-01-19T17:00",
+      "finish": "2027-01-19T17:00",
+      "lateStart": "2027-01-18T17:00",
+      "lateFinish": "2027-01-18T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "CONNECTDEC"
+    },
+    {
+      "id": "task-mvx6hzl44qjk47",
+      "name": "G3 - Release Rev2 PCBA and housing tooling",
+      "wbs": "4.7",
+      "parentId": "task-mvx6hzjth7dp40",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-02-25T17:00",
+      "finish": "2027-02-25T17:00",
+      "lateStart": "2027-02-24T17:00",
+      "lateFinish": "2027-02-24T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "FREEZE"
+    },
+    {
+      "id": "task-mvx6hznek8mf58",
+      "name": "G4 - T1 integrated evaluation and correction list accepted",
+      "wbs": "5.10",
+      "parentId": "task-mvx6hzlbe19e48",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-04-15T17:00",
+      "finish": "2027-04-15T17:00",
+      "lateStart": "2027-04-14T17:00",
+      "lateFinish": "2027-04-14T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T1GATE"
+    },
+    {
+      "id": "task-mvx6hzp0hwuf66",
+      "name": "G5 - T2 preproduction candidate accepted",
+      "wbs": "6.6",
+      "parentId": "task-mvx6hznucyne60",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-06-02T17:00",
+      "finish": "2027-06-02T17:00",
+      "lateStart": "2027-06-01T17:00",
+      "lateFinish": "2027-06-01T17:00",
+      "totalFloat": -1,
+      "critical": true,
+      "planId": "T2GATE"
+    },
+    {
+      "id": "task-mvx6hzsb53rt81",
+      "name": "G6 - Qualification and US/Canada release evidence accepted",
+      "wbs": "7.14",
+      "parentId": "task-mvx6hzp72upm67",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-06-21T17:00",
+      "finish": "2027-06-21T17:00",
+      "lateStart": "2027-06-30T17:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": 7,
+      "critical": false,
+      "planId": "MARKET"
+    },
+    {
+      "id": "task-mvx6hztyf9jy89",
+      "name": "G7 - Controlled pilot build readiness",
+      "wbs": "8.7",
+      "parentId": "task-mvx6hzsi35w482",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-07-02T09:00",
+      "finish": "2027-07-02T09:00",
+      "lateStart": "2027-06-30T17:00",
+      "lateFinish": "2027-06-30T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "PVTREADY"
+    },
+    {
+      "id": "task-mvx6hzv7rnim95",
+      "name": "G8 - Authorize mass production release",
+      "wbs": "9.5",
+      "parentId": "task-mvx6hzu5p9fn90",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-08-18T17:00",
+      "finish": "2027-08-18T17:00",
+      "lateStart": "2027-08-18T17:00",
+      "lateFinish": "2027-08-18T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "MPREL"
+    },
+    {
+      "id": "task-mvx6hzvtve8998",
+      "name": "G9 - First mass-production lot ready to ship",
+      "wbs": "9.8",
+      "parentId": "task-mvx6hzu5p9fn90",
+      "summary": false,
+      "milestone": true,
+      "start": "2027-09-23T17:00",
+      "finish": "2027-09-23T17:00",
+      "lateStart": "2027-09-23T17:00",
+      "lateFinish": "2027-09-23T17:00",
+      "totalFloat": 0,
+      "critical": true,
+      "planId": "MP"
+    }
+  ],
+  "criticalPath": [
+    "task-mvx6hzerk0of13",
+    "task-mvx6hzewiq1u14",
+    "task-mvx6hzg5ze3122",
+    "task-mvx6hzf10h8315",
+    "task-mvx6hzf73fyk16",
+    "task-mvx6hzgklu3u24",
+    "task-mvx6hzfde71d17",
+    "task-mvx6hzgsad5c25",
+    "task-mvx6hzgyh4zj26",
+    "task-mvx6hzi47aen32",
+    "task-mvx6hzib1vym33",
+    "task-mvx6hzirsbgv35",
+    "task-mvx6hziyj7br36",
+    "task-mvx6hzj7pfp337",
+    "task-mvx6hzje9odx38",
+    "task-mvx6hzjlvyso39",
+    "task-mvx6hzjypanz41",
+    "task-mvx6hzk4zt5q42",
+    "task-mvx6hzkcirrv43",
+    "task-mvx6hzl44qjk47",
+    "task-mvx6hzlhyppa49",
+    "task-mvx6hzlqc70u50",
+    "task-mvx6hzm6cftc52",
+    "task-mvx6hzmd27vf53",
+    "task-mvx6hzn6mzpx57",
+    "task-mvx6hznek8mf58",
+    "task-mvx6hznz3ixk61",
+    "task-mvx6hzo61a5s62",
+    "task-mvx6hzoezr2k63",
+    "task-mvx6hzomt7s564",
+    "task-mvx6hzouwytm65",
+    "task-mvx6hzp0hwuf66",
+    "task-mvx6hztqw0c788",
+    "task-mvx6hztyf9jy89",
+    "task-mvx6hzuaqmok91",
+    "task-mvx6hzujuv9292",
+    "task-mvx6hzur2vdc93",
+    "task-mvx6hzv0wy5594",
+    "task-mvx6hzv7rnim95",
+    "task-mvx6hzvenas396",
+    "task-mvx6hzvm97es97",
+    "task-mvx6hzvtve8998"
+  ],
+  "remainingDiagnostics": {
+    "negativeFloat": [
+      {
+        "id": "task-mvx6hzemxupj12",
+        "name": "01 - Current position and program decisions",
+        "wbs": "1",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2026-11-02T09:00",
+        "finish": "2026-12-17T17:00",
+        "lateStart": "2026-10-29T09:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzerk0of13",
+        "name": "Planning start - Rev0 complete; Rev1 schematic in review and layout underway",
+        "wbs": "1.1",
+        "parentId": "task-mvx6hzemxupj12",
+        "summary": false,
+        "milestone": true,
+        "start": "2026-11-02T09:00",
+        "finish": "2026-11-02T09:00",
+        "lateStart": "2026-10-29T09:00",
+        "lateFinish": "2026-10-29T09:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzg0cbna21",
+        "name": "02 - Rev1 PCB and prototype housing release",
+        "wbs": "2",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2026-11-02T09:00",
+        "finish": "2026-12-11T17:00",
+        "lateStart": "2026-10-29T09:00",
+        "lateFinish": "2027-01-04T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzg5ze3122",
+        "name": "Close Rev1 schematic review and BOM metadata",
+        "wbs": "2.1",
+        "parentId": "task-mvx6hzg0cbna21",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-11-02T09:00",
+        "finish": "2026-11-10T17:00",
+        "lateStart": "2026-10-29T09:00",
+        "lateFinish": "2026-11-06T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzgklu3u24",
+        "name": "Complete Rev1 routing and RF / power / mechanical review",
+        "wbs": "2.2",
+        "parentId": "task-mvx6hzg0cbna21",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-11-11T09:00",
+        "finish": "2026-11-24T17:00",
+        "lateStart": "2026-11-09T09:00",
+        "lateFinish": "2026-11-20T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzgsad5c25",
+        "name": "Rev1 PCBA DFM, AVL availability and release package",
+        "wbs": "2.3",
+        "parentId": "task-mvx6hzg0cbna21",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-11-25T09:00",
+        "finish": "2026-12-01T17:00",
+        "lateStart": "2026-11-23T09:00",
+        "lateFinish": "2026-11-27T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzgyh4zj26",
+        "name": "G1 - Release Rev1 PCBA prototype run",
+        "wbs": "2.4",
+        "parentId": "task-mvx6hzg0cbna21",
+        "summary": false,
+        "milestone": true,
+        "start": "2026-12-01T17:00",
+        "finish": "2026-12-01T17:00",
+        "lateStart": "2026-11-27T17:00",
+        "lateFinish": "2026-11-27T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzhz4fet31",
+        "name": "03 - Rev1 EVT build and integrated learning",
+        "wbs": "3",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2026-11-11T09:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2026-11-30T09:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -3,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzi47aen32",
+        "name": "Fabricate and assemble Rev1 engineering boards",
+        "wbs": "3.1",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-12-02T09:00",
+        "finish": "2026-12-15T17:00",
+        "lateStart": "2026-11-30T09:00",
+        "lateFinish": "2026-12-11T17:00",
+        "totalFloat": -2,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzib1vym33",
+        "name": "Rev1 board shipment, import and incoming inspection",
+        "wbs": "3.2",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-12-16T09:00",
+        "finish": "2026-12-20T17:00",
+        "lateStart": "2026-12-13T09:00",
+        "lateFinish": "2026-12-17T17:00",
+        "totalFloat": -3,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzirsbgv35",
+        "name": "Bring up Rev1 PCBA with current-limited staged power",
+        "wbs": "3.4",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2026-12-21T09:00",
+        "finish": "2027-01-05T17:00",
+        "lateStart": "2026-12-18T09:00",
+        "lateFinish": "2027-01-04T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hziyj7br36",
+        "name": "Rev1 power, input fault screening and radio transient tests",
+        "wbs": "3.5",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-01-06T09:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2027-01-05T09:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzj7pfp337",
+        "name": "Rev1 antenna, coexistence and EMC pre-scan",
+        "wbs": "3.6",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-01-06T09:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2027-01-05T09:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzje9odx38",
+        "name": "Rev1 integrated membrane, housing and sensor experiments",
+        "wbs": "3.7",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-01-06T09:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2027-01-05T09:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzjlvyso39",
+        "name": "G2 - Rev1 EVT findings and Rev2 change list approved",
+        "wbs": "3.8",
+        "parentId": "task-mvx6hzhz4fet31",
+        "summary": false,
+        "milestone": true,
+        "start": "2027-01-19T17:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2027-01-18T17:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzjth7dp40",
+        "name": "04 - Rev2 and tool-ready design freeze",
+        "wbs": "4",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2027-01-19T17:00",
+        "finish": "2027-02-25T17:00",
+        "lateStart": "2027-01-18T17:00",
+        "lateFinish": "2027-02-24T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzjypanz41",
+        "name": "G3a - Cellular SIM and satellite launch decision",
+        "wbs": "4.1",
+        "parentId": "task-mvx6hzjth7dp40",
+        "summary": false,
+        "milestone": true,
+        "start": "2027-01-19T17:00",
+        "finish": "2027-01-19T17:00",
+        "lateStart": "2027-01-18T17:00",
+        "lateFinish": "2027-01-18T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzk4zt5q42",
+        "name": "Rev2 electrical changes, worst-case closure and schematic review",
+        "wbs": "4.2",
+        "parentId": "task-mvx6hzjth7dp40",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-01-20T09:00",
+        "finish": "2027-02-02T17:00",
+        "lateStart": "2027-01-19T09:00",
+        "lateFinish": "2027-02-01T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzkcirrv43",
+        "name": "Rev2 layout, RF and DFM review",
+        "wbs": "4.3",
+        "parentId": "task-mvx6hzjth7dp40",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-02-03T09:00",
+        "finish": "2027-02-25T17:00",
+        "lateStart": "2027-02-02T09:00",
+        "lateFinish": "2027-02-24T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzl44qjk47",
+        "name": "G3 - Release Rev2 PCBA and housing tooling",
+        "wbs": "4.7",
+        "parentId": "task-mvx6hzjth7dp40",
+        "summary": false,
+        "milestone": true,
+        "start": "2027-02-25T17:00",
+        "finish": "2027-02-25T17:00",
+        "lateStart": "2027-02-24T17:00",
+        "lateFinish": "2027-02-24T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzlbe19e48",
+        "name": "05 - Rev2 / T1 first molded integration",
+        "wbs": "5",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2027-02-26T09:00",
+        "finish": "2027-04-15T17:00",
+        "lateStart": "2027-02-25T09:00",
+        "lateFinish": "2027-04-14T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzlhyppa49",
+        "name": "Build Rev2 production-intent boards",
+        "wbs": "5.1",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-02-26T09:00",
+        "finish": "2027-03-18T17:00",
+        "lateStart": "2027-02-25T09:00",
+        "lateFinish": "2027-03-17T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzlqc70u50",
+        "name": "Ship and inspect Rev2 boards",
+        "wbs": "5.2",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-03-19T09:00",
+        "finish": "2027-03-23T17:00",
+        "lateStart": "2027-03-18T09:00",
+        "lateFinish": "2027-03-22T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzm6cftc52",
+        "name": "Rev2 incoming bring-up and early lab sample release",
+        "wbs": "5.4",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-03-24T09:00",
+        "finish": "2027-03-25T17:00",
+        "lateStart": "2027-03-23T09:00",
+        "lateFinish": "2027-03-24T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzmd27vf53",
+        "name": "Complete Rev2 electrical fix verification alongside lab testing",
+        "wbs": "5.5",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-03-29T09:00",
+        "finish": "2027-04-08T17:00",
+        "lateStart": "2027-03-25T09:00",
+        "lateFinish": "2027-04-07T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzn6mzpx57",
+        "name": "T1 - Mechanical and electrical assembly evaluation",
+        "wbs": "5.9",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-04-09T09:00",
+        "finish": "2027-04-15T17:00",
+        "lateStart": "2027-04-08T09:00",
+        "lateFinish": "2027-04-14T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hznek8mf58",
+        "name": "G4 - T1 integrated evaluation and correction list accepted",
+        "wbs": "5.10",
+        "parentId": "task-mvx6hzlbe19e48",
+        "summary": false,
+        "milestone": true,
+        "start": "2027-04-15T17:00",
+        "finish": "2027-04-15T17:00",
+        "lateStart": "2027-04-14T17:00",
+        "lateFinish": "2027-04-14T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hznucyne60",
+        "name": "06 - T2 correction and preproduction validation",
+        "wbs": "6",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2027-04-16T09:00",
+        "finish": "2027-06-02T17:00",
+        "lateStart": "2027-04-15T09:00",
+        "lateFinish": "2027-06-01T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hznz3ixk61",
+        "name": "Freeze T2 correction package and final test limits",
+        "wbs": "6.1",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-04-16T09:00",
+        "finish": "2027-04-22T17:00",
+        "lateStart": "2027-04-15T09:00",
+        "lateFinish": "2027-04-21T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzo61a5s62",
+        "name": "T2 - Tool corrections and process adjustments",
+        "wbs": "6.2",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-04-23T09:00",
+        "finish": "2027-05-11T17:00",
+        "lateStart": "2027-04-22T09:00",
+        "lateFinish": "2027-05-10T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzoezr2k63",
+        "name": "T2 - Repeat trial and supplier first-article inspection",
+        "wbs": "6.3",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-05-12T09:00",
+        "finish": "2027-05-13T17:00",
+        "lateStart": "2027-05-11T09:00",
+        "lateFinish": "2027-05-12T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzomt7s564",
+        "name": "T2 - Air shipment and incoming inspection",
+        "wbs": "6.4",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-05-14T09:00",
+        "finish": "2027-05-18T17:00",
+        "lateStart": "2027-05-13T09:00",
+        "lateFinish": "2027-05-17T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzouwytm65",
+        "name": "T2 - Integrated mechanical and electrical evaluation",
+        "wbs": "6.5",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-05-19T09:00",
+        "finish": "2027-06-02T17:00",
+        "lateStart": "2027-05-18T09:00",
+        "lateFinish": "2027-06-01T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzp0hwuf66",
+        "name": "G5 - T2 preproduction candidate accepted",
+        "wbs": "6.6",
+        "parentId": "task-mvx6hznucyne60",
+        "summary": false,
+        "milestone": true,
+        "start": "2027-06-02T17:00",
+        "finish": "2027-06-02T17:00",
+        "lateStart": "2027-06-01T17:00",
+        "lateFinish": "2027-06-01T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hzsi35w482",
+        "name": "08 - Manufacturing system and software handoff gates",
+        "wbs": "8",
+        "parentId": null,
+        "summary": true,
+        "milestone": false,
+        "start": "2027-03-05T09:00",
+        "finish": "2027-07-02T09:00",
+        "lateStart": "2027-04-13T09:00",
+        "lateFinish": "2027-06-30T17:00",
+        "totalFloat": -1,
+        "critical": true
+      },
+      {
+        "id": "task-mvx6hztqw0c788",
+        "name": "Approve production material availability and logistics plan",
+        "wbs": "8.6",
+        "parentId": "task-mvx6hzsi35w482",
+        "summary": false,
+        "milestone": false,
+        "start": "2027-06-03T09:00",
+        "finish": "2027-07-01T17:00",
+        "lateStart": "2027-06-02T09:00",
+        "lateFinish": "2027-06-30T17:00",
+        "totalFloat": -1,
+        "critical": true
+      }
+    ],
+    "explanation": "The existing mixed-calendar backward-pass diagnostic remains (1-3 days negative float). No finish deadline is present; the existing Rev1-build SNET is unchanged. Forward dates reproduce in the pinned headless core. This was not hidden by pinning dates or increasing capacity."
+  },
+  "limitations": [
+    "Effort percentages, availability of the second Profili person and parallel Sofeast staffing are planning assumptions requiring confirmation; absence of modeled overallocation is not proof of real staffing, skill coverage or lab capacity.",
+    "Part-time effort is spread uniformly over task working days; actual attendance/peaks should be updated when test bookings and delivery details exist.",
+    "Sofeast retains its unconstrained 51-task organization envelope, not 51 confirmed people; its current peak is six concurrent task units.",
+    "China annual holiday/make-up working-day arrangements remain unconfirmed planning allowances, as documented in the planning basis.",
+    "JSON and earlier CSV/reports are historical snapshots; regeneration would replace current maintenance.",
+    "IFC export is saved but does not clear the app dirty flag. No graphical Gantt or print inspection."
+  ],
+  "backup": ".cache/effort-revision-2026-11-01/live-before.ifc"
+}
